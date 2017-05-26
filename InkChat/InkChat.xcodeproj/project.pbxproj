@@ -36,6 +36,10 @@
 		DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */; };
 		DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */; };
 		DE6F4EF71ED8492200313477 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF61ED8492200313477 /* ProfileViewController.swift */; };
+		DE6F4F021ED8543400313477 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4F001ED8543400313477 /* Login.storyboard */; };
+		DE6F4F041ED8618300313477 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4F031ED8618300313477 /* StyleViewController.swift */; };
+		DE6F4F061ED863AD00313477 /* StyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4F051ED863AD00313477 /* StyleCollectionViewCell.swift */; };
+		DE6F4F081ED8654700313477 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4F071ED8654700313477 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
 		DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewController.swift; sourceTree = "<group>"; };
 		DE6F4EF61ED8492200313477 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DE6F4F011ED8543400313477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = InkChat/Base.lproj/Login.storyboard; sourceTree = SOURCE_ROOT; };
+		DE6F4F031ED8618300313477 /* StyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		DE6F4F051ED863AD00313477 /* StyleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE6F4F071ED8654700313477 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F61F3FABFA810316A23FB7A1 /* Pods-InkChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +178,7 @@
 				DE5867491ED7E11000FD57C1 /* Protocols */,
 				DE5866BF1ED7C2AE00FD57C1 /* Main */,
 				DE6F4EDD1ED8010E00313477 /* Profile */,
+				DE6F4EF91ED8537200313477 /* Login */,
 				DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */,
 				DE5866981ED7BDB700FD57C1 /* Assets.xcassets */,
 				DE58669A1ED7BDB700FD57C1 /* LaunchScreen.storyboard */,
@@ -311,6 +320,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE6F4EF91ED8537200313477 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DE6F4F001ED8543400313477 /* Login.storyboard */,
+				DE6F4EFA1ED8537200313477 /* Controller */,
+				DE6F4EFB1ED8537200313477 /* Model */,
+				DE6F4EFC1ED8537200313477 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DE6F4EFA1ED8537200313477 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE6F4F031ED8618300313477 /* StyleViewController.swift */,
+				DE6F4F071ED8654700313477 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE6F4EFB1ED8537200313477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6F4EFC1ED8537200313477 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE6F4F051ED863AD00313477 /* StyleCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +474,7 @@
 			files = (
 				DE58669C1ED7BDB700FD57C1 /* LaunchScreen.storyboard in Resources */,
 				DE5866991ED7BDB700FD57C1 /* Assets.xcassets in Resources */,
+				DE6F4F021ED8543400313477 /* Login.storyboard in Resources */,
 				DE6F4EE21ED8023F00313477 /* Profile.storyboard in Resources */,
 				DE6F4EED1ED816F600313477 /* TattooCollectionViewCell.xib in Resources */,
 				DE5867181ED7DDD700FD57C1 /* MainTableViewCell.xib in Resources */,
@@ -617,10 +662,13 @@
 				DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */,
 				DE6F4EEF1ED8363100313477 /* CustomViewController.swift in Sources */,
 				DE6F4EF71ED8492200313477 /* ProfileViewController.swift in Sources */,
+				DE6F4F081ED8654700313477 /* LoginViewController.swift in Sources */,
 				DE5866C61ED7D72900FD57C1 /* MainTableViewCell.swift in Sources */,
 				DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */,
 				DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */,
 				DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */,
+				DE6F4F041ED8618300313477 /* StyleViewController.swift in Sources */,
+				DE6F4F061ED863AD00313477 /* StyleCollectionViewCell.swift in Sources */,
 				DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */,
 				DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */,
 				DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */,
@@ -676,6 +724,14 @@
 				DE58669B1ED7BDB700FD57C1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DE6F4F001ED8543400313477 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE6F4F011ED8543400313477 /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

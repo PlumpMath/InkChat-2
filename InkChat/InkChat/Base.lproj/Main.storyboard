@@ -18,6 +18,14 @@
             </objects>
             <point key="canvasLocation" x="913" y="-560"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="g1V-42-Zr8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="UXq-eC-ro6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3f7-84-Lza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122" y="-560"/>
+        </scene>
         <!--Home-->
         <scene sceneID="uA9-r7-gtz">
             <objects>
@@ -46,7 +54,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="en4-uB-Ins" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="FQy-Bj-DVt"/>
+                <swipeGestureRecognizer direction="right" id="FQy-Bj-DVt">
+                    <connections>
+                        <segue destination="UXq-eC-ro6" kind="custom" customClass="PresentFadeSegue" customModule="IBAnimatable" id="Lkr-dn-rsg"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="1yo-lK-cGV">
                     <connections>
                         <segue destination="uYa-xN-xkc" kind="show" id="qhF-fL-Lot"/>
