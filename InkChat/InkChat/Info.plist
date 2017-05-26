@@ -31,8 +31,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,5 +39,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>InkChat cameraDesciption</string>
+    <key>NSContactsUsageDescription</key>
+    <string>InkChat contactsDesciption</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>InkChat microphoneDesciption</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>InkChat photoLibraryDesciption</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>InkChat musicUsageDescription</string>
 </dict>
 </plist>

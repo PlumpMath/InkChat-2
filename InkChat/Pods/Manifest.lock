@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.4.0)
+  - IBAnimatable (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4.0)
+  - IBAnimatable (~> 4.1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
+
+PODFILE CHECKSUM: a76c7b39feba90916e1436ef872b5a7dabce0837
+
+COCOAPODS: 1.2.1

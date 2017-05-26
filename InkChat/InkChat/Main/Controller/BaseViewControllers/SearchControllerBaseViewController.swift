@@ -58,10 +58,21 @@ class SearchControllerBaseViewController: UITableViewController {
         
         if result.contains("George") {
             cell.backgroundImage.image = #imageLiteral(resourceName: "main_1")
+            cell.favoriteButton.setImage(#imageLiteral(resourceName: "heart_black"), for: .normal)
         } else {
             cell.backgroundImage.image = #imageLiteral(resourceName: "main_2")
+            cell.favoriteButton.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
         }
         
         return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        self.present(vc!, animated: true, completion: nil)
     }
 }

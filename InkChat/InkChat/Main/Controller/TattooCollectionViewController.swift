@@ -39,9 +39,10 @@ class TattooCollectionViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
-    // MARK: UICollectionViewDataSource
-
+// MARK: UICollectionViewDataSource
+extension TattooCollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -60,7 +61,15 @@ class TattooCollectionViewController: UICollectionViewController {
     
         return cell
     }
+}
 
+// MAKR: - UICollectionViewDelegate
+extension TattooCollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        self.performSegue(withIdentifier: "CustomViewControllerSegue", sender: nil)
+    }
 }
 
 

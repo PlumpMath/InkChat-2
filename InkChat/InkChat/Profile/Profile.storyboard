@@ -13,7 +13,7 @@
         <!--Profile-->
         <scene sceneID="329-9Z-cI5">
             <objects>
-                <viewController id="rmI-8e-3G0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="rmI-8e-3G0" customClass="ProfileViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2G8-5g-OJe"/>
                         <viewControllerLayoutGuide type="bottom" id="OLJ-cR-322"/>
@@ -128,21 +128,33 @@ to full type of grid. Black lines never out of date.</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
                                                         <state key="normal" image="product"/>
                                                         <state key="selected" image="product_selected"/>
+                                                        <connections>
+                                                            <action selector="productButtonSelected:" destination="rmI-8e-3G0" eventType="touchUpInside" id="Ayx-bV-QZh"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI8-UY-gEO">
                                                         <rect key="frame" x="94" y="0.0" width="93.5" height="50"/>
                                                         <state key="normal" image="info"/>
                                                         <state key="selected" image="info_selected"/>
+                                                        <connections>
+                                                            <action selector="infoButtonSelected:" destination="rmI-8e-3G0" eventType="touchUpInside" id="bfE-WF-Mkc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-Ki-SwD">
                                                         <rect key="frame" x="187.5" y="0.0" width="94" height="50"/>
                                                         <state key="normal" image="favorite"/>
                                                         <state key="selected" image="favorite_selected"/>
+                                                        <connections>
+                                                            <action selector="favoriteButtonSelected:" destination="rmI-8e-3G0" eventType="touchUpInside" id="zj8-1u-EcO"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLV-e3-f7L">
                                                         <rect key="frame" x="281.5" y="0.0" width="93.5" height="50"/>
                                                         <state key="normal" image="chat"/>
                                                         <state key="selected" image="chat_selected"/>
+                                                        <connections>
+                                                            <action selector="chatButtonSelected:" destination="rmI-8e-3G0" eventType="touchUpInside" id="m3r-83-XOj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -177,6 +189,7 @@ to full type of grid. Black lines never out of date.</string>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OLJ-cR-322" firstAttribute="top" secondItem="Rou-UJ-A1f" secondAttribute="bottom" id="6bO-m4-hiQ"/>
                             <constraint firstItem="tS0-FY-G4O" firstAttribute="leading" secondItem="Kfp-sD-KOc" secondAttribute="leading" id="QrM-ub-CIg"/>
@@ -186,6 +199,9 @@ to full type of grid. Black lines never out of date.</string>
                             <constraint firstItem="Rou-UJ-A1f" firstAttribute="leading" secondItem="Kfp-sD-KOc" secondAttribute="leading" id="xHm-t9-isZ"/>
                             <constraint firstItem="tS0-FY-G4O" firstAttribute="top" secondItem="2G8-5g-OJe" secondAttribute="bottom" id="zdE-Sz-aZh"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aod-HA-0tm" appends="YES" id="xhP-wG-mnh"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="g3a-Pf-TVN">
                         <barButtonItem key="leftBarButtonItem" image="tattoo" id="fG5-lM-svS">
@@ -199,8 +215,20 @@ to full type of grid. Black lines never out of date.</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chatButton" destination="WLV-e3-f7L" id="qxd-bg-hng"/>
+                        <outlet property="containerView" destination="Rou-UJ-A1f" id="whV-Dq-cxw"/>
+                        <outlet property="favariteButton" destination="TxL-Ki-SwD" id="s3c-AY-HXT"/>
+                        <outlet property="infoButton" destination="xI8-UY-gEO" id="fxn-57-Jjw"/>
+                        <outlet property="productButton" destination="3Q2-aA-0K3" id="YMK-vn-2Y6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktb-dq-L8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="aod-HA-0tm">
+                    <connections>
+                        <segue destination="2sH-W2-LUP" kind="custom" customClass="DismissSegue" customModule="IBAnimatable" id="gyM-vu-nq7"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="46" y="-475"/>
         </scene>
@@ -322,14 +350,14 @@ to full type of grid. Black lines never out of date.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="¥¥¥：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T2C-Bp-cou">
-                                                    <rect key="frame" x="15" y="12" width="50" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="49.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="500-1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cPn-bi-UaM">
-                                                    <rect key="frame" x="283" y="12" width="77" height="21"/>
+                                                    <rect key="frame" x="283" y="12" width="77" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -426,7 +454,7 @@ to full type of grid. Black lines never out of date.</string>
         <!--Table View Controller-->
         <scene sceneID="ARE-op-urp">
             <objects>
-                <tableViewController id="s0s-yD-9fN" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="InfoViewController" id="s0s-yD-9fN" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rbQ-h2-nGT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,8 +469,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="地标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ku-wP-p1c">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ku-wP-p1c">
+                                                    <rect key="frame" x="15" y="12" width="60.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -465,15 +493,15 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="姓别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n17-cd-trO">
-                                                    <rect key="frame" x="15" y="12" width="35" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n17-cd-trO">
+                                                    <rect key="frame" x="15" y="12" width="54.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="女" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rr4-bQ-mks">
-                                                    <rect key="frame" x="325" y="12" width="35" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="female" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rr4-bQ-mks">
+                                                    <rect key="frame" x="308.5" y="12" width="51.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -489,8 +517,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Red-k8-5lG">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Red-k8-5lG">
+                                                    <rect key="frame" x="15" y="12" width="38.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -513,8 +541,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="语言" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRk-76-Em5">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRk-76-Em5">
+                                                    <rect key="frame" x="15" y="12" width="70.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -537,8 +565,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y8R-rD-2Wc">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="mobile phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y8R-rD-2Wc">
+                                                    <rect key="frame" x="15" y="12" width="104" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -561,8 +589,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p5q-uP-Vwv">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p5q-uP-Vwv">
+                                                    <rect key="frame" x="15" y="12" width="40.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -585,8 +613,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10P-vO-xHT">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10P-vO-xHT">
+                                                    <rect key="frame" x="15" y="12" width="40" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -630,10 +658,19 @@ to full type of grid. Black lines never out of date.</string>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r21-W4-fGi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4as-RB-a2z">
+                                <rect key="frame" x="139.5" y="285.5" width="97" height="97"/>
+                                <state key="normal" image="head"/>
+                                <connections>
+                                    <segue destination="eRK-Mj-5p1" kind="show" id="KwA-I9-6nO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cxl-bz-l5p" firstAttribute="top" secondItem="r21-W4-fGi" secondAttribute="bottom" id="0Ht-wk-fpo"/>
+                            <constraint firstItem="4as-RB-a2z" firstAttribute="centerY" secondItem="EiM-1C-bnR" secondAttribute="centerY" id="28m-nP-P3k"/>
+                            <constraint firstItem="4as-RB-a2z" firstAttribute="centerX" secondItem="EiM-1C-bnR" secondAttribute="centerX" id="TK7-MX-mcp"/>
                             <constraint firstAttribute="trailing" secondItem="r21-W4-fGi" secondAttribute="trailing" id="WYZ-Gr-t0a"/>
                             <constraint firstItem="r21-W4-fGi" firstAttribute="top" secondItem="fw0-B7-quv" secondAttribute="bottom" id="nHW-gR-r5M"/>
                             <constraint firstItem="r21-W4-fGi" firstAttribute="leading" secondItem="EiM-1C-bnR" secondAttribute="leading" id="xDO-QY-mOG"/>
@@ -643,6 +680,111 @@ to full type of grid. Black lines never out of date.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aG-be-ak5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46" y="-1182"/>
+        </scene>
+        <!--Follow-->
+        <scene sceneID="UTo-Ib-5m0">
+            <objects>
+                <viewController storyboardIdentifier="FollowViewController" title="Follow" id="eRK-Mj-5p1" customClass="FollowViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EWx-YC-5yc"/>
+                        <viewControllerLayoutGuide type="bottom" id="C7G-RV-ukG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m4x-28-gLM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4k0-Be-tfI">
+                                <rect key="frame" x="115" y="66" width="145" height="29"/>
+                                <segments>
+                                    <segment title="Followers"/>
+                                    <segment title="Following"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectChanged:" destination="eRK-Mj-5p1" eventType="valueChanged" id="Twh-kT-LYl"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GoY-Ga-ErZ">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FollowTableViewCell" id="zKX-kT-rKv" customClass="FollowTableViewCell" customModule="InkChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKX-kT-rKv" id="ff1-Gh-9LN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0N-De-DEA">
+                                                    <rect key="frame" x="20" y="7.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="D0N-De-DEA" secondAttribute="height" multiplier="1:1" id="s2e-cq-Sc4"/>
+                                                        <constraint firstAttribute="width" constant="50" id="tWb-pN-dyK"/>
+                                                    </constraints>
+                                                    <state key="normal" image="head"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ft-Ge-18j" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                    <rect key="frame" x="280" y="19.5" width="75" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="RIT-zT-d4D"/>
+                                                        <constraint firstAttribute="width" constant="75" id="l3d-1m-cwI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <state key="normal" title="Following"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1Ft-Ge-18j" secondAttribute="trailing" constant="20" id="iy1-R6-3Hi"/>
+                                                <constraint firstItem="D0N-De-DEA" firstAttribute="leading" secondItem="ff1-Gh-9LN" secondAttribute="leading" constant="20" id="vbR-dF-Qgb"/>
+                                                <constraint firstItem="1Ft-Ge-18j" firstAttribute="centerY" secondItem="ff1-Gh-9LN" secondAttribute="centerY" id="wIp-xm-S9d"/>
+                                                <constraint firstItem="D0N-De-DEA" firstAttribute="centerY" secondItem="ff1-Gh-9LN" secondAttribute="centerY" id="xTe-bD-k5s"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="followButton" destination="1Ft-Ge-18j" id="ZrG-Uz-afI"/>
+                                            <outlet property="headButton" destination="D0N-De-DEA" id="jUK-YJ-2bF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4k0-Be-tfI" firstAttribute="centerX" secondItem="m4x-28-gLM" secondAttribute="centerX" id="MhZ-ma-3a7"/>
+                            <constraint firstItem="GoY-Ga-ErZ" firstAttribute="top" secondItem="4k0-Be-tfI" secondAttribute="bottom" constant="2" id="Nu2-dH-dU8"/>
+                            <constraint firstItem="C7G-RV-ukG" firstAttribute="top" secondItem="GoY-Ga-ErZ" secondAttribute="bottom" id="Zax-zp-tkF"/>
+                            <constraint firstAttribute="trailing" secondItem="GoY-Ga-ErZ" secondAttribute="trailing" id="dy4-4o-Kyd"/>
+                            <constraint firstItem="GoY-Ga-ErZ" firstAttribute="leading" secondItem="m4x-28-gLM" secondAttribute="leading" id="hx7-he-hfl"/>
+                            <constraint firstItem="4k0-Be-tfI" firstAttribute="top" secondItem="EWx-YC-5yc" secondAttribute="bottom" constant="2" id="yFo-4Y-W9s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="4k0-Be-tfI" id="bMz-ol-0q3"/>
+                        <outlet property="tableView" destination="GoY-Ga-ErZ" id="aHb-wH-4ur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elL-vZ-ylB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="-1182"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="WXH-od-kT8">
+            <objects>
+                <viewControllerPlaceholder id="2sH-W2-LUP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRd-zj-Q5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771" y="-954"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xyO-dk-Wdh">
@@ -660,8 +802,105 @@ to full type of grid. Black lines never out of date.</string>
             </objects>
             <point key="canvasLocation" x="-798" y="-475"/>
         </scene>
+        <!--Show Collection View Controller-->
+        <scene sceneID="ECJ-5p-Ng0">
+            <objects>
+                <viewController storyboardIdentifier="ShowCollectionViewController" id="xmI-ia-GbH" customClass="ShowCollectionViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k1v-d6-W8i"/>
+                        <viewControllerLayoutGuide type="bottom" id="e15-HR-cAa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zGl-GB-eqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rJt-ZW-mcM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.89016014340000005" green="0.87061083319999999" blue="0.8706054688" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="0vP-ja-x5z">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="klG-i3-5WX">
+                                <rect key="frame" x="107.5" y="263.5" width="160" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j3F-dW-6Vt">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X4B-dn-6zE">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oC-AL-evM">
+                                                        <rect key="frame" x="50" y="0.0" width="60" height="60"/>
+                                                        <state key="normal" image="camera"/>
+                                                        <connections>
+                                                            <action selector="cameraSelected:" destination="xmI-ia-GbH" eventType="touchUpInside" id="G7m-oD-kyy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-ge-Iaf">
+                                        <rect key="frame" x="0.0" y="80" width="160" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmU-wS-GPe">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <state key="normal" image="picture"/>
+                                                <connections>
+                                                    <action selector="pictureSeleccted:" destination="xmI-ia-GbH" eventType="touchUpInside" id="agI-FN-m5x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7T-ms-OBy">
+                                                <rect key="frame" x="100" y="0.0" width="60" height="60"/>
+                                                <state key="normal" image="video"/>
+                                                <connections>
+                                                    <action selector="videoSelected:" destination="xmI-ia-GbH" eventType="touchUpInside" id="kHA-Hn-1Cy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-bi-9Tx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="10"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="hYN-ga-wdW"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.85098039215686272" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="w9z-bi-9Tx" secondAttribute="trailing" id="JXr-rG-h9X"/>
+                            <constraint firstAttribute="trailing" secondItem="rJt-ZW-mcM" secondAttribute="trailing" id="KaR-7K-7eh"/>
+                            <constraint firstItem="klG-i3-5WX" firstAttribute="centerY" secondItem="zGl-GB-eqf" secondAttribute="centerY" id="OJj-im-a2j"/>
+                            <constraint firstItem="rJt-ZW-mcM" firstAttribute="top" secondItem="zGl-GB-eqf" secondAttribute="top" id="Ro9-Nf-6Go"/>
+                            <constraint firstItem="rJt-ZW-mcM" firstAttribute="leading" secondItem="zGl-GB-eqf" secondAttribute="leading" id="UxZ-2c-UkS"/>
+                            <constraint firstItem="w9z-bi-9Tx" firstAttribute="leading" secondItem="zGl-GB-eqf" secondAttribute="leading" id="Uyr-oT-dvL"/>
+                            <constraint firstItem="klG-i3-5WX" firstAttribute="centerX" secondItem="zGl-GB-eqf" secondAttribute="centerX" id="VNS-jq-O19"/>
+                            <constraint firstItem="w9z-bi-9Tx" firstAttribute="top" secondItem="k1v-d6-W8i" secondAttribute="bottom" id="byY-cI-1w0"/>
+                            <constraint firstItem="e15-HR-cAa" firstAttribute="top" secondItem="rJt-ZW-mcM" secondAttribute="bottom" id="w8q-O4-HxS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rJt-ZW-mcM" id="M9x-Ar-tiw"/>
+                        <outlet property="updateStackView" destination="klG-i3-5WX" id="FKi-Ib-KKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOI-6J-WKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="296"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="camera" width="60" height="60"/>
         <image name="chat" width="26" height="25"/>
         <image name="chat_selected" width="26" height="25"/>
         <image name="favorite" width="27" height="22"/>
@@ -671,9 +910,11 @@ to full type of grid. Black lines never out of date.</string>
         <image name="info" width="27" height="27"/>
         <image name="info_selected" width="27" height="27"/>
         <image name="person" width="14" height="14"/>
+        <image name="picture" width="60" height="60"/>
         <image name="product" width="25" height="25"/>
         <image name="product_selected" width="25" height="25"/>
         <image name="setting" width="26" height="24"/>
         <image name="tattoo" width="26" height="24"/>
+        <image name="video" width="60" height="60"/>
     </resources>
 </document>

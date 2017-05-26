@@ -6,10 +6,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--主页-->
+        <!--Profile-->
+        <scene sceneID="ecx-NV-IMR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="K6l-UU-tBp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFf-yr-Txg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="-560"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="uA9-r7-gtz">
             <objects>
                 <tableViewController storyboardIdentifier="MainViewController" id="NlD-Ug-Lmb" customClass="MainViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,20 +31,25 @@
                             <outlet property="dataSource" destination="NlD-Ug-Lmb" id="f3A-en-fua"/>
                             <outlet property="delegate" destination="NlD-Ug-Lmb" id="9A3-Z0-W8f"/>
                             <outletCollection property="gestureRecognizers" destination="FQy-Bj-DVt" appends="YES" id="9GG-Qf-kHf"/>
+                            <outletCollection property="gestureRecognizers" destination="1yo-lK-cGV" appends="YES" id="UBV-a8-jfu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="主页" id="tHc-fw-UQc">
+                    <navigationItem key="navigationItem" title="Home" id="tHc-fw-UQc">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="uRr-Tz-kDc">
                             <connections>
                                 <action selector="searchButtonClicked:" destination="NlD-Ug-Lmb" id="8mv-h3-CIU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="K6l-UU-tBp" kind="custom" customClass="PresentSlideSegue" customModule="IBAnimatable" id="fgT-my-h0q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="en4-uB-Ins" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="FQy-Bj-DVt">
+                <swipeGestureRecognizer direction="right" id="FQy-Bj-DVt"/>
+                <swipeGestureRecognizer direction="left" id="1yo-lK-cGV">
                     <connections>
-                        <segue destination="uYa-xN-xkc" kind="show" id="B7F-dx-tn2"/>
+                        <segue destination="uYa-xN-xkc" kind="show" id="qhF-fL-Lot"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -45,7 +59,7 @@
         <scene sceneID="7za-We-y7U">
             <objects>
                 <collectionViewController storyboardIdentifier="TattooCollectionViewController" title="No Tear" id="uYa-xN-xkc" customClass="TattooCollectionViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eS8-nE-JJn">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="eS8-nE-JJn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89016014337539673" green="0.87061083316802979" blue="0.87060546875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -55,25 +69,161 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TattooCell" id="Iu2-y3-4J3">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="uYa-xN-xkc" id="dTR-rY-ZMF"/>
                             <outlet property="delegate" destination="uYa-xN-xkc" id="gzu-LD-jsN"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="No Tear" id="Mh8-GL-7V7"/>
+                    <connections>
+                        <segue destination="QfH-Ec-Hqi" kind="show" identifier="CustomViewControllerSegue" id="Plf-36-QKS"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvV-ua-i1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631" y="-161"/>
+            <point key="canvasLocation" x="2568.8000000000002" y="-161.46926536731635"/>
+        </scene>
+        <!--custom-->
+        <scene sceneID="IjC-Ad-5qF">
+            <objects>
+                <viewController storyboardIdentifier="CustomViewController" id="QfH-Ec-Hqi" customClass="CustomViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6EC-JA-NlG"/>
+                        <viewControllerLayoutGuide type="bottom" id="isT-VJ-e9X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ts4-8x-0bU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s77-yc-TLO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom" translatesAutoresizingMaskIntoConstraints="NO" id="1Cr-a1-Sxd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1Cr-a1-Sxd" secondAttribute="bottom" id="3zk-1H-icB"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Cr-a1-Sxd" secondAttribute="trailing" id="Fte-o6-kkD"/>
+                                    <constraint firstAttribute="width" secondItem="s77-yc-TLO" secondAttribute="height" multiplier="1:1" id="O2Y-fg-MMd"/>
+                                    <constraint firstItem="1Cr-a1-Sxd" firstAttribute="leading" secondItem="s77-yc-TLO" secondAttribute="leading" id="PeB-qE-meA"/>
+                                    <constraint firstItem="1Cr-a1-Sxd" firstAttribute="top" secondItem="s77-yc-TLO" secondAttribute="top" id="mY9-HB-cqb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-Ur-A2T">
+                                <rect key="frame" x="0.0" y="395" width="375" height="272"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Mb-yn-XLv">
+                                        <rect key="frame" x="0.0" y="86" width="375" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-g5-oBR">
+                                                <rect key="frame" x="25.5" y="0.0" width="324" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKo-j3-m8Q" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                        <rect key="frame" x="0.0" y="32.5" width="75" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="PPo-ZR-ebz"/>
+                                                            <constraint firstAttribute="height" constant="35" id="lwZ-Sn-Cip"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Album"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                <color key="value" red="0.19616927206516266" green="0.1883491575717926" blue="0.18834617733955383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33H-V2-8Dh">
+                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="8tk-o9-q4p"/>
+                                                            <constraint firstAttribute="width" secondItem="33H-V2-8Dh" secondAttribute="height" multiplier="1:1" id="ocp-ik-x3W"/>
+                                                        </constraints>
+                                                        <state key="normal" image="camera"/>
+                                                    </button>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="on" offImage="off" translatesAutoresizingMaskIntoConstraints="NO" id="Xuf-Rc-z77">
+                                                        <rect key="frame" x="275" y="34.5" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="yKo-j3-m8Q" firstAttribute="centerY" secondItem="33H-V2-8Dh" secondAttribute="centerY" id="78Q-6R-Rt0"/>
+                                                    <constraint firstItem="33H-V2-8Dh" firstAttribute="top" secondItem="ftS-g5-oBR" secondAttribute="top" id="EIF-9K-gdb"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-qg-rP1">
+                                        <rect key="frame" x="0.0" y="79.5" width="375" height="113"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AJm-Eo-AE3">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baF-aF-A0q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="68"/>
+                                                        <state key="normal" title="Button" image="wechat"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mw-XP-HPM">
+                                                        <rect key="frame" x="94" y="0.0" width="93.5" height="68"/>
+                                                        <state key="normal" title="Button" image="moments"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-7g-Dv3">
+                                                        <rect key="frame" x="187.5" y="0.0" width="94" height="68"/>
+                                                        <state key="normal" title="Button" image="weibo"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-G9-hn7">
+                                                        <rect key="frame" x="281.5" y="0.0" width="93.5" height="68"/>
+                                                        <state key="normal" title="Button" image="share"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxW-yw-qUZ">
+                                                <rect key="frame" x="0.0" y="83" width="375" height="30"/>
+                                                <state key="normal" title="去除#INKCHAT水印?"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5Mb-yn-XLv" firstAttribute="centerY" secondItem="EO9-Ur-A2T" secondAttribute="centerY" id="8f8-QH-dZy"/>
+                                    <constraint firstItem="5Mb-yn-XLv" firstAttribute="width" secondItem="EO9-Ur-A2T" secondAttribute="width" id="BGI-Qm-DPx"/>
+                                    <constraint firstItem="5Mb-yn-XLv" firstAttribute="leading" secondItem="EO9-Ur-A2T" secondAttribute="leading" id="O2K-ad-PAC"/>
+                                    <constraint firstItem="j2u-qg-rP1" firstAttribute="width" secondItem="EO9-Ur-A2T" secondAttribute="width" id="Yg1-XP-GRO"/>
+                                    <constraint firstItem="j2u-qg-rP1" firstAttribute="centerY" secondItem="EO9-Ur-A2T" secondAttribute="centerY" id="l8P-iT-Mmk"/>
+                                    <constraint firstItem="j2u-qg-rP1" firstAttribute="centerX" secondItem="EO9-Ur-A2T" secondAttribute="centerX" id="tE7-ln-oWi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EO9-Ur-A2T" firstAttribute="leading" secondItem="ts4-8x-0bU" secondAttribute="leading" id="5GY-Sx-gNX"/>
+                            <constraint firstItem="s77-yc-TLO" firstAttribute="leading" secondItem="ts4-8x-0bU" secondAttribute="leading" id="CfT-Hd-KyJ"/>
+                            <constraint firstItem="isT-VJ-e9X" firstAttribute="top" secondItem="EO9-Ur-A2T" secondAttribute="bottom" id="EV7-We-pWx"/>
+                            <constraint firstItem="EO9-Ur-A2T" firstAttribute="top" secondItem="s77-yc-TLO" secondAttribute="bottom" id="FC7-o9-lFV"/>
+                            <constraint firstAttribute="trailing" secondItem="s77-yc-TLO" secondAttribute="trailing" id="Kvr-wK-MQM"/>
+                            <constraint firstAttribute="trailing" secondItem="EO9-Ur-A2T" secondAttribute="trailing" id="Unz-ri-UaE"/>
+                            <constraint firstItem="s77-yc-TLO" firstAttribute="top" secondItem="6EC-JA-NlG" secondAttribute="bottom" id="V0I-fh-UlF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="custom" id="kok-BF-qkl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="OHK-BM-61J">
+                            <connections>
+                                <action selector="shareButtonClicked:" destination="QfH-Ec-Hqi" id="my4-3T-gzo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraStackView" destination="5Mb-yn-XLv" id="k3l-qB-QWL"/>
+                        <outlet property="shareStackView" destination="j2u-qg-rP1" id="dEy-rL-a8w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZK-6F-cie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3463" y="-161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pcx-Rw-pus">
@@ -111,5 +261,36 @@
             </objects>
             <point key="canvasLocation" x="-810" y="-161"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RSU-5d-q93">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G80-FC-07V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xql-Ri-Gp5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uYa-xN-xkc" kind="relationship" relationship="rootViewController" id="Vae-lx-0ei"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhh-wy-Q4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629.5999999999999" y="-161.46926536731635"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="60" height="60"/>
+        <image name="custom" width="750" height="756"/>
+        <image name="moments" width="68" height="68"/>
+        <image name="off" width="146" height="87"/>
+        <image name="on" width="149" height="87"/>
+        <image name="share" width="68" height="68"/>
+        <image name="wechat" width="68" height="68"/>
+        <image name="weibo" width="68" height="68"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qhF-fL-Lot"/>
+    </inferredMetricsTieBreakers>
 </document>

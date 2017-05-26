@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5594DD8100014EDF7881A4E6 /* Pods_InkChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509B51E4D1580933001BA945 /* Pods_InkChatUITests.framework */; };
+		7F81F42075E03968BE842FB8 /* Pods_InkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6F34CA4C5717511B6A3EA2 /* Pods_InkChat.framework */; };
+		B1ECA7205701B7C8B807AE4C /* Pods_InkChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33219DEFF5482D44CCE2FBD1 /* Pods_InkChatTests.framework */; };
 		DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */; };
 		DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5866921ED7BDB700FD57C1 /* Main.storyboard */; };
 		DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */; };
@@ -28,6 +31,11 @@
 		DE6F4EE71ED8167A00313477 /* TattooCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */; };
 		DE6F4EEC1ED816F600313477 /* TattooCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */; };
 		DE6F4EED1ED816F600313477 /* TattooCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EEB1ED816F600313477 /* TattooCollectionViewCell.xib */; };
+		DE6F4EEF1ED8363100313477 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EEE1ED8363100313477 /* CustomViewController.swift */; };
+		DE6F4EF11ED83B8E00313477 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF01ED83B8E00313477 /* FollowViewController.swift */; };
+		DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */; };
+		DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */; };
+		DE6F4EF71ED8492200313477 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF61ED8492200313477 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D876E6C3AE3ABD9287E6EF /* Pods-InkChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatUITests/Pods-InkChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		33219DEFF5482D44CCE2FBD1 /* Pods_InkChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InkChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5C62FEEB1237A717733983 /* Pods-InkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-InkChat/Pods-InkChat.release.xcconfig"; sourceTree = "<group>"; };
+		46B7B5CCB6F95FA42CA19AE6 /* Pods-InkChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatUITests/Pods-InkChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		509B51E4D1580933001BA945 /* Pods_InkChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InkChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A6F34CA4C5717511B6A3EA2 /* Pods_InkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC58A2858F0C255140D1BE70 /* Pods-InkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InkChat/Pods-InkChat.debug.xcconfig"; sourceTree = "<group>"; };
+		DB9CCE2F8417C33343C911AD /* Pods-InkChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE58668B1ED7BDB700FD57C1 /* InkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5866931ED7BDB700FD57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +91,12 @@
 		DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TattooCollectionViewController.swift; sourceTree = "<group>"; };
 		DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TattooCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE6F4EEB1ED816F600313477 /* TattooCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TattooCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE6F4EEE1ED8363100313477 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		DE6F4EF01ED83B8E00313477 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
+		DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewController.swift; sourceTree = "<group>"; };
+		DE6F4EF61ED8492200313477 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F61F3FABFA810316A23FB7A1 /* Pods-InkChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6F4EE51ED8157500313477 /* MapKit.framework in Frameworks */,
+				7F81F42075E03968BE842FB8 /* Pods_InkChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1ECA7205701B7C8B807AE4C /* Pods_InkChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +121,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5594DD8100014EDF7881A4E6 /* Pods_InkChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9648A07B538FEBF9186C19BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC58A2858F0C255140D1BE70 /* Pods-InkChat.debug.xcconfig */,
+				3F5C62FEEB1237A717733983 /* Pods-InkChat.release.xcconfig */,
+				F61F3FABFA810316A23FB7A1 /* Pods-InkChatTests.debug.xcconfig */,
+				DB9CCE2F8417C33343C911AD /* Pods-InkChatTests.release.xcconfig */,
+				46B7B5CCB6F95FA42CA19AE6 /* Pods-InkChatUITests.debug.xcconfig */,
+				06D876E6C3AE3ABD9287E6EF /* Pods-InkChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE5866821ED7BDB600FD57C1 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +149,7 @@
 				DE5866B01ED7BDB700FD57C1 /* InkChatUITests */,
 				DE58668C1ED7BDB700FD57C1 /* Products */,
 				DE6F4EE31ED8157500313477 /* Frameworks */,
+				9648A07B538FEBF9186C19BA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +232,7 @@
 				DE5867121ED7DCC000FD57C1 /* BaseViewControllers */,
 				DE5866C01ED7C2D100FD57C1 /* MainViewController.swift */,
 				DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */,
+				DE6F4EEE1ED8363100313477 /* CustomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +278,9 @@
 		DE6F4EDE1ED8021800313477 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DE6F4EF01ED83B8E00313477 /* FollowViewController.swift */,
+				DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */,
+				DE6F4EF61ED8492200313477 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +295,7 @@
 		DE6F4EE01ED8021800313477 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				DE6F4EE41ED8157500313477 /* MapKit.framework */,
+				7A6F34CA4C5717511B6A3EA2 /* Pods_InkChat.framework */,
+				33219DEFF5482D44CCE2FBD1 /* Pods_InkChatTests.framework */,
+				509B51E4D1580933001BA945 /* Pods_InkChatUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,10 +318,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE5866B61ED7BDB700FD57C1 /* Build configuration list for PBXNativeTarget "InkChat" */;
 			buildPhases = (
+				561CCD35E037038175C07C85 /* [CP] Check Pods Manifest.lock */,
 				DE5866871ED7BDB700FD57C1 /* Sources */,
 				DE5866881ED7BDB700FD57C1 /* Frameworks */,
 				DE5866891ED7BDB700FD57C1 /* Resources */,
 				DE5866C71ED7DA5E00FD57C1 /* ShellScript */,
+				2AAAD316E1138447936D52B1 /* [CP] Embed Pods Frameworks */,
+				44BB673095665428B6CDDD46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,9 +339,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE5866B91ED7BDB800FD57C1 /* Build configuration list for PBXNativeTarget "InkChatTests" */;
 			buildPhases = (
+				142C46F42A8886CF24F96197 /* [CP] Check Pods Manifest.lock */,
 				DE58669E1ED7BDB700FD57C1 /* Sources */,
 				DE58669F1ED7BDB700FD57C1 /* Frameworks */,
 				DE5866A01ED7BDB700FD57C1 /* Resources */,
+				58307B19699B71E9C4430B8C /* [CP] Embed Pods Frameworks */,
+				E7B0D318E48A7A32A01C707E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,9 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE5866BC1ED7BDB800FD57C1 /* Build configuration list for PBXNativeTarget "InkChatUITests" */;
 			buildPhases = (
+				A4AB76260943C9751356A633 /* [CP] Check Pods Manifest.lock */,
 				DE5866A91ED7BDB700FD57C1 /* Sources */,
 				DE5866AA1ED7BDB700FD57C1 /* Frameworks */,
 				DE5866AB1ED7BDB700FD57C1 /* Resources */,
+				646C60CE4103A4A05901D02C /* [CP] Embed Pods Frameworks */,
+				487C3F40F0B056591D15025C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,6 +454,126 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		142C46F42A8886CF24F96197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2AAAD316E1138447936D52B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InkChat/Pods-InkChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44BB673095665428B6CDDD46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InkChat/Pods-InkChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		487C3F40F0B056591D15025C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InkChatUITests/Pods-InkChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		561CCD35E037038175C07C85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58307B19699B71E9C4430B8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		646C60CE4103A4A05901D02C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InkChatUITests/Pods-InkChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4AB76260943C9751356A633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		DE5866C71ED7DA5E00FD57C1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +586,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Scripts/iconVersioning.sh\"";
+		};
+		E7B0D318E48A7A32A01C707E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -424,12 +615,17 @@
 				DE6F4EEC1ED816F600313477 /* TattooCollectionViewCell.swift in Sources */,
 				DE5867151ED7DCEC00FD57C1 /* SearchControllerBaseViewController.swift in Sources */,
 				DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */,
+				DE6F4EEF1ED8363100313477 /* CustomViewController.swift in Sources */,
+				DE6F4EF71ED8492200313477 /* ProfileViewController.swift in Sources */,
 				DE5866C61ED7D72900FD57C1 /* MainTableViewCell.swift in Sources */,
 				DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */,
 				DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */,
 				DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */,
 				DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */,
 				DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */,
+				DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */,
+				DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */,
+				DE6F4EF11ED83B8E00313477 /* FollowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +778,7 @@
 		};
 		DE5866B71ED7BDB700FD57C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC58A2858F0C255140D1BE70 /* Pods-InkChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InkChat/Info.plist;
@@ -595,6 +792,7 @@
 		};
 		DE5866B81ED7BDB700FD57C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F5C62FEEB1237A717733983 /* Pods-InkChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InkChat/Info.plist;
@@ -608,6 +806,7 @@
 		};
 		DE5866BA1ED7BDB800FD57C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F61F3FABFA810316A23FB7A1 /* Pods-InkChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -622,6 +821,7 @@
 		};
 		DE5866BB1ED7BDB800FD57C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9CCE2F8417C33343C911AD /* Pods-InkChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -636,6 +836,7 @@
 		};
 		DE5866BD1ED7BDB800FD57C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B7B5CCB6F95FA42CA19AE6 /* Pods-InkChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = InkChatUITests/Info.plist;
@@ -649,6 +850,7 @@
 		};
 		DE5866BE1ED7BDB800FD57C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D876E6C3AE3ABD9287E6EF /* Pods-InkChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = InkChatUITests/Info.plist;
