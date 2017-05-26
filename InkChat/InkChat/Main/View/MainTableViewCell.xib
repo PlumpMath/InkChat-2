@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" id="QaL-76-r9H" customClass="MainTableViewCell" customModule="InkChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QaL-76-r9H" id="C81-qp-q6c">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="main_1" translatesAutoresizingMaskIntoConstraints="NO" id="bgx-wx-ztP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW1-dP-jYV">
+                        <rect key="frame" x="16" y="180" width="343" height="36.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-or-VFS">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="36.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rosella Semmes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4q-fs-QfV">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f7E-jm-XgM">
+                                        <rect key="frame" x="0.0" y="19.5" width="52" height="17"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="zBo-LP-hPt">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="17"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="China" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAZ-Eb-y7l">
+                                                <rect key="frame" x="15" y="0.0" width="37" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D5p-jY-ngX">
+                                <rect key="frame" x="119" y="0.0" width="194" height="36.5"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9gB-te-yuR">
+                                <rect key="frame" x="313" y="0.0" width="30" height="36.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-1E-YeL">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="36.5"/>
+                                        <state key="normal" image="heart"/>
+                                        <connections>
+                                            <action selector="favoriteButtonClicked:" destination="QaL-76-r9H" eventType="touchUpInside" id="N0l-ZH-VeW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bgx-wx-ztP" secondAttribute="bottom" id="3Pi-LF-YdF"/>
+                    <constraint firstItem="bgx-wx-ztP" firstAttribute="top" secondItem="C81-qp-q6c" secondAttribute="top" id="3dv-Lk-6F9"/>
+                    <constraint firstItem="bgx-wx-ztP" firstAttribute="leading" secondItem="C81-qp-q6c" secondAttribute="leading" id="OWZ-9n-Nn6"/>
+                    <constraint firstItem="uW1-dP-jYV" firstAttribute="bottom" secondItem="bgx-wx-ztP" secondAttribute="bottom" constant="-8" id="Rts-Yp-QSW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uW1-dP-jYV" secondAttribute="trailing" constant="8" id="Uc8-f8-Ikt"/>
+                    <constraint firstItem="bgx-wx-ztP" firstAttribute="width" secondItem="C81-qp-q6c" secondAttribute="width" id="Vc4-i7-hTU"/>
+                    <constraint firstAttribute="trailing" secondItem="bgx-wx-ztP" secondAttribute="trailing" id="g3X-HT-Lf9"/>
+                    <constraint firstItem="uW1-dP-jYV" firstAttribute="leading" secondItem="C81-qp-q6c" secondAttribute="leadingMargin" constant="8" id="gzQ-Lr-k87"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundImage" destination="bgx-wx-ztP" id="6Iy-u0-mrY"/>
+                <outlet property="favoriteButton" destination="Chw-1E-YeL" id="gLv-gr-x8i"/>
+                <outlet property="locationLabel" destination="zAZ-Eb-y7l" id="0hA-9A-1qS"/>
+                <outlet property="nameLabel" destination="W4q-fs-QfV" id="uNs-SP-tUe"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" width="30" height="25"/>
+        <image name="location" width="10" height="12"/>
+        <image name="main_1" width="746" height="449"/>
+    </resources>
+</document>

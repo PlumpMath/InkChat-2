@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */; };
+		DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5866921ED7BDB700FD57C1 /* Main.storyboard */; };
+		DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */; };
+		DE5866991ED7BDB700FD57C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5866981ED7BDB700FD57C1 /* Assets.xcassets */; };
+		DE58669C1ED7BDB700FD57C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE58669A1ED7BDB700FD57C1 /* LaunchScreen.storyboard */; };
+		DE5866A71ED7BDB700FD57C1 /* InkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5866A61ED7BDB700FD57C1 /* InkChatTests.swift */; };
+		DE5866B21ED7BDB700FD57C1 /* InkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5866B11ED7BDB700FD57C1 /* InkChatUITests.swift */; };
+		DE5866C61ED7D72900FD57C1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5866C51ED7D72900FD57C1 /* MainTableViewCell.swift */; };
+		DE5867151ED7DCEC00FD57C1 /* SearchControllerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5867131ED7DCEC00FD57C1 /* SearchControllerBaseViewController.swift */; };
+		DE5867161ED7DCEC00FD57C1 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5867141ED7DCEC00FD57C1 /* SearchResultsViewController.swift */; };
+		DE5867181ED7DDD700FD57C1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5867171ED7DDD700FD57C1 /* MainTableViewCell.xib */; };
+		DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58674A1ED7E14F00FD57C1 /* ReusableView.swift */; };
+		DE58674D1ED7E14F00FD57C1 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58674B1ED7E14F00FD57C1 /* NibLoadableView.swift */; };
+		DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58674F1ED7E17500FD57C1 /* UICollectionView+Ext.swift */; };
+		DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5867511ED7E1A700FD57C1 /* UITableView+Ext.swift */; };
+		DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5866C01ED7C2D100FD57C1 /* MainViewController.swift */; };
+		DE6F4EE21ED8023F00313477 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EE11ED8023F00313477 /* Profile.storyboard */; };
+		DE6F4EE51ED8157500313477 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6F4EE41ED8157500313477 /* MapKit.framework */; };
+		DE6F4EE71ED8167A00313477 /* TattooCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */; };
+		DE6F4EEC1ED816F600313477 /* TattooCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */; };
+		DE6F4EED1ED816F600313477 /* TattooCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EEB1ED816F600313477 /* TattooCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE5866A31ED7BDB700FD57C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE5866831ED7BDB600FD57C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE58668A1ED7BDB700FD57C1;
+			remoteInfo = InkChat;
+		};
+		DE5866AE1ED7BDB700FD57C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE5866831ED7BDB600FD57C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE58668A1ED7BDB700FD57C1;
+			remoteInfo = InkChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE58668B1ED7BDB700FD57C1 /* InkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE5866931ED7BDB700FD57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE5866961ED7BDB700FD57C1 /* InkChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InkChat.xcdatamodel; sourceTree = "<group>"; };
+		DE5866981ED7BDB700FD57C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE58669B1ED7BDB700FD57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE58669D1ED7BDB700FD57C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE5866A21ED7BDB700FD57C1 /* InkChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InkChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5866A61ED7BDB700FD57C1 /* InkChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkChatTests.swift; sourceTree = "<group>"; };
+		DE5866A81ED7BDB700FD57C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE5866AD1ED7BDB700FD57C1 /* InkChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InkChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5866B11ED7BDB700FD57C1 /* InkChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkChatUITests.swift; sourceTree = "<group>"; };
+		DE5866B31ED7BDB700FD57C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE5866C01ED7C2D100FD57C1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE5866C51ED7D72900FD57C1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		DE5867131ED7DCEC00FD57C1 /* SearchControllerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerBaseViewController.swift; sourceTree = "<group>"; };
+		DE5867141ED7DCEC00FD57C1 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		DE5867171ED7DDD700FD57C1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		DE58674A1ED7E14F00FD57C1 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		DE58674B1ED7E14F00FD57C1 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		DE58674F1ED7E17500FD57C1 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
+		DE5867511ED7E1A700FD57C1 /* UITableView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		DE6F4EE11ED8023F00313477 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DE6F4EE41ED8157500313477 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TattooCollectionViewController.swift; sourceTree = "<group>"; };
+		DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TattooCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE6F4EEB1ED816F600313477 /* TattooCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TattooCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE5866881ED7BDB700FD57C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE6F4EE51ED8157500313477 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE58669F1ED7BDB700FD57C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5866AA1ED7BDB700FD57C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE5866821ED7BDB600FD57C1 = {
+			isa = PBXGroup;
+			children = (
+				DE58668D1ED7BDB700FD57C1 /* InkChat */,
+				DE5866A51ED7BDB700FD57C1 /* InkChatTests */,
+				DE5866B01ED7BDB700FD57C1 /* InkChatUITests */,
+				DE58668C1ED7BDB700FD57C1 /* Products */,
+				DE6F4EE31ED8157500313477 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE58668C1ED7BDB700FD57C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE58668B1ED7BDB700FD57C1 /* InkChat.app */,
+				DE5866A21ED7BDB700FD57C1 /* InkChatTests.xctest */,
+				DE5866AD1ED7BDB700FD57C1 /* InkChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE58668D1ED7BDB700FD57C1 /* InkChat */ = {
+			isa = PBXGroup;
+			children = (
+				DE58674E1ED7E15300FD57C1 /* Extensions */,
+				DE5867491ED7E11000FD57C1 /* Protocols */,
+				DE5866BF1ED7C2AE00FD57C1 /* Main */,
+				DE6F4EDD1ED8010E00313477 /* Profile */,
+				DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */,
+				DE5866981ED7BDB700FD57C1 /* Assets.xcassets */,
+				DE58669A1ED7BDB700FD57C1 /* LaunchScreen.storyboard */,
+				DE58669D1ED7BDB700FD57C1 /* Info.plist */,
+				DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */,
+			);
+			path = InkChat;
+			sourceTree = "<group>";
+		};
+		DE5866A51ED7BDB700FD57C1 /* InkChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE5866A61ED7BDB700FD57C1 /* InkChatTests.swift */,
+				DE5866A81ED7BDB700FD57C1 /* Info.plist */,
+			);
+			path = InkChatTests;
+			sourceTree = "<group>";
+		};
+		DE5866B01ED7BDB700FD57C1 /* InkChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE5866B11ED7BDB700FD57C1 /* InkChatUITests.swift */,
+				DE5866B31ED7BDB700FD57C1 /* Info.plist */,
+			);
+			path = InkChatUITests;
+			sourceTree = "<group>";
+		};
+		DE5866BF1ED7C2AE00FD57C1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DE5866921ED7BDB700FD57C1 /* Main.storyboard */,
+				DE5866C41ED7C69B00FD57C1 /* Controller */,
+				DE5866C31ED7C69800FD57C1 /* View */,
+				DE5866C21ED7C69100FD57C1 /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DE5866C21ED7C69100FD57C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE5866C31ED7C69800FD57C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE5866C51ED7D72900FD57C1 /* MainTableViewCell.swift */,
+				DE5867171ED7DDD700FD57C1 /* MainTableViewCell.xib */,
+				DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */,
+				DE6F4EEB1ED816F600313477 /* TattooCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE5866C41ED7C69B00FD57C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE5867121ED7DCC000FD57C1 /* BaseViewControllers */,
+				DE5866C01ED7C2D100FD57C1 /* MainViewController.swift */,
+				DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE5867121ED7DCC000FD57C1 /* BaseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE5867131ED7DCEC00FD57C1 /* SearchControllerBaseViewController.swift */,
+				DE5867141ED7DCEC00FD57C1 /* SearchResultsViewController.swift */,
+			);
+			path = BaseViewControllers;
+			sourceTree = "<group>";
+		};
+		DE5867491ED7E11000FD57C1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DE58674A1ED7E14F00FD57C1 /* ReusableView.swift */,
+				DE58674B1ED7E14F00FD57C1 /* NibLoadableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DE58674E1ED7E15300FD57C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE5867511ED7E1A700FD57C1 /* UITableView+Ext.swift */,
+				DE58674F1ED7E17500FD57C1 /* UICollectionView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DE6F4EDD1ED8010E00313477 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DE6F4EE11ED8023F00313477 /* Profile.storyboard */,
+				DE6F4EDE1ED8021800313477 /* Controller */,
+				DE6F4EDF1ED8021800313477 /* Model */,
+				DE6F4EE01ED8021800313477 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DE6F4EDE1ED8021800313477 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE6F4EDF1ED8021800313477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6F4EE01ED8021800313477 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE6F4EE31ED8157500313477 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE6F4EE41ED8157500313477 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE58668A1ED7BDB700FD57C1 /* InkChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE5866B61ED7BDB700FD57C1 /* Build configuration list for PBXNativeTarget "InkChat" */;
+			buildPhases = (
+				DE5866871ED7BDB700FD57C1 /* Sources */,
+				DE5866881ED7BDB700FD57C1 /* Frameworks */,
+				DE5866891ED7BDB700FD57C1 /* Resources */,
+				DE5866C71ED7DA5E00FD57C1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InkChat;
+			productName = InkChat;
+			productReference = DE58668B1ED7BDB700FD57C1 /* InkChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE5866A11ED7BDB700FD57C1 /* InkChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE5866B91ED7BDB800FD57C1 /* Build configuration list for PBXNativeTarget "InkChatTests" */;
+			buildPhases = (
+				DE58669E1ED7BDB700FD57C1 /* Sources */,
+				DE58669F1ED7BDB700FD57C1 /* Frameworks */,
+				DE5866A01ED7BDB700FD57C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE5866A41ED7BDB700FD57C1 /* PBXTargetDependency */,
+			);
+			name = InkChatTests;
+			productName = InkChatTests;
+			productReference = DE5866A21ED7BDB700FD57C1 /* InkChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE5866AC1ED7BDB700FD57C1 /* InkChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE5866BC1ED7BDB800FD57C1 /* Build configuration list for PBXNativeTarget "InkChatUITests" */;
+			buildPhases = (
+				DE5866A91ED7BDB700FD57C1 /* Sources */,
+				DE5866AA1ED7BDB700FD57C1 /* Frameworks */,
+				DE5866AB1ED7BDB700FD57C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE5866AF1ED7BDB700FD57C1 /* PBXTargetDependency */,
+			);
+			name = InkChatUITests;
+			productName = InkChatUITests;
+			productReference = DE5866AD1ED7BDB700FD57C1 /* InkChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE5866831ED7BDB600FD57C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = iOSDevLog;
+				TargetAttributes = {
+					DE58668A1ED7BDB700FD57C1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					DE5866A11ED7BDB700FD57C1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE58668A1ED7BDB700FD57C1;
+					};
+					DE5866AC1ED7BDB700FD57C1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE58668A1ED7BDB700FD57C1;
+					};
+				};
+			};
+			buildConfigurationList = DE5866861ED7BDB700FD57C1 /* Build configuration list for PBXProject "InkChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE5866821ED7BDB600FD57C1;
+			productRefGroup = DE58668C1ED7BDB700FD57C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE58668A1ED7BDB700FD57C1 /* InkChat */,
+				DE5866A11ED7BDB700FD57C1 /* InkChatTests */,
+				DE5866AC1ED7BDB700FD57C1 /* InkChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE5866891ED7BDB700FD57C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE58669C1ED7BDB700FD57C1 /* LaunchScreen.storyboard in Resources */,
+				DE5866991ED7BDB700FD57C1 /* Assets.xcassets in Resources */,
+				DE6F4EE21ED8023F00313477 /* Profile.storyboard in Resources */,
+				DE6F4EED1ED816F600313477 /* TattooCollectionViewCell.xib in Resources */,
+				DE5867181ED7DDD700FD57C1 /* MainTableViewCell.xib in Resources */,
+				DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5866A01ED7BDB700FD57C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5866AB1ED7BDB700FD57C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE5866C71ED7DA5E00FD57C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Scripts/iconVersioning.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE5866871ED7BDB700FD57C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE58674D1ED7E14F00FD57C1 /* NibLoadableView.swift in Sources */,
+				DE5867161ED7DCEC00FD57C1 /* SearchResultsViewController.swift in Sources */,
+				DE6F4EE71ED8167A00313477 /* TattooCollectionViewController.swift in Sources */,
+				DE6F4EEC1ED816F600313477 /* TattooCollectionViewCell.swift in Sources */,
+				DE5867151ED7DCEC00FD57C1 /* SearchControllerBaseViewController.swift in Sources */,
+				DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */,
+				DE5866C61ED7D72900FD57C1 /* MainTableViewCell.swift in Sources */,
+				DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */,
+				DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */,
+				DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */,
+				DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */,
+				DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE58669E1ED7BDB700FD57C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5866A71ED7BDB700FD57C1 /* InkChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5866A91ED7BDB700FD57C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5866B21ED7BDB700FD57C1 /* InkChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE5866A41ED7BDB700FD57C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE58668A1ED7BDB700FD57C1 /* InkChat */;
+			targetProxy = DE5866A31ED7BDB700FD57C1 /* PBXContainerItemProxy */;
+		};
+		DE5866AF1ED7BDB700FD57C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE58668A1ED7BDB700FD57C1 /* InkChat */;
+			targetProxy = DE5866AE1ED7BDB700FD57C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE5866921ED7BDB700FD57C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE5866931ED7BDB700FD57C1 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		DE58669A1ED7BDB700FD57C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE58669B1ED7BDB700FD57C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE5866B41ED7BDB700FD57C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE5866B51ED7BDB700FD57C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE5866B71ED7BDB700FD57C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InkChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.InkChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE5866B81ED7BDB700FD57C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InkChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.InkChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DE5866BA1ED7BDB800FD57C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InkChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.InkChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InkChat.app/InkChat";
+			};
+			name = Debug;
+		};
+		DE5866BB1ED7BDB800FD57C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InkChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.InkChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InkChat.app/InkChat";
+			};
+			name = Release;
+		};
+		DE5866BD1ED7BDB800FD57C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = InkChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.InkChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InkChat;
+			};
+			name = Debug;
+		};
+		DE5866BE1ED7BDB800FD57C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = InkChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.InkChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InkChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE5866861ED7BDB700FD57C1 /* Build configuration list for PBXProject "InkChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5866B41ED7BDB700FD57C1 /* Debug */,
+				DE5866B51ED7BDB700FD57C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE5866B61ED7BDB700FD57C1 /* Build configuration list for PBXNativeTarget "InkChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5866B71ED7BDB700FD57C1 /* Debug */,
+				DE5866B81ED7BDB700FD57C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE5866B91ED7BDB800FD57C1 /* Build configuration list for PBXNativeTarget "InkChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5866BA1ED7BDB800FD57C1 /* Debug */,
+				DE5866BB1ED7BDB800FD57C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE5866BC1ED7BDB800FD57C1 /* Build configuration list for PBXNativeTarget "InkChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5866BD1ED7BDB800FD57C1 /* Debug */,
+				DE5866BE1ED7BDB800FD57C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE5866961ED7BDB700FD57C1 /* InkChat.xcdatamodel */,
+			);
+			currentVersion = DE5866961ED7BDB700FD57C1 /* InkChat.xcdatamodel */;
+			path = InkChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DE5866831ED7BDB600FD57C1 /* Project object */;
+}
