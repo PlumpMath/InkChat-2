@@ -5,6 +5,13 @@ target 'InkChat' do
   use_frameworks!
   pod 'IBAnimatable', '~> 4.1.0'
   pod 'Alamofire', '~> 4.4.0'
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'JSQMessagesViewController'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'SDWebImage'
 
   # Pods for InkChat
 

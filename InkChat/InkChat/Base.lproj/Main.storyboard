@@ -247,7 +247,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6gR-py-UVO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2kW-YS-fUt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2kW-YS-fUt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>605308252737-r8j81sa1fjmqo5hdqv6likj429s09e8p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.605308252737-r8j81sa1fjmqo5hdqv6likj429s09e8p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDlBR3GgRntrDbcfLuj3WqmQvCWyUBGt6Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>605308252737</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.iosdevlog.InkChat</string>
+	<key>PROJECT_ID</key>
+	<string>inkchat-2ddaf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>inkchat-2ddaf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:605308252737:ios:bdc4e6f4569160c2</string>
+	<key>DATABASE_URL</key>
+	<string>https://inkchat-2ddaf.firebaseio.com</string>
+</dict>
+</plist>
