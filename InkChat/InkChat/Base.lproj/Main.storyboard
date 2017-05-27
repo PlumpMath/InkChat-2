@@ -71,7 +71,7 @@
         <scene sceneID="7za-We-y7U">
             <objects>
                 <collectionViewController storyboardIdentifier="TattooCollectionViewController" title="No Tear" id="uYa-xN-xkc" customClass="TattooCollectionViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="eS8-nE-JJn">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eS8-nE-JJn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89016014337539673" green="0.87061083316802979" blue="0.87060546875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -127,7 +127,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-Ur-A2T">
                                 <rect key="frame" x="0.0" y="395" width="375" height="272"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Mb-yn-XLv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Mb-yn-XLv" customClass="AnimatableStackView" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="86" width="375" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-g5-oBR">
@@ -149,13 +149,18 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33H-V2-8Dh">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33H-V2-8Dh" customClass="AnimatableButton" customModule="IBAnimatable">
                                                         <rect key="frame" x="125" y="0.0" width="100" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="8tk-o9-q4p"/>
                                                             <constraint firstAttribute="width" secondItem="33H-V2-8Dh" secondAttribute="height" multiplier="1:1" id="ocp-ik-x3W"/>
                                                         </constraints>
-                                                        <state key="normal" image="camera"/>
+                                                        <state key="normal" image="big_camera"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="on" offImage="off" translatesAutoresizingMaskIntoConstraints="NO" id="Xuf-Rc-z77">
                                                         <rect key="frame" x="275" y="34.5" width="51" height="31"/>
@@ -168,7 +173,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-qg-rP1">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-qg-rP1" customClass="AnimatableStackView" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="79.5" width="375" height="113"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AJm-Eo-AE3">
@@ -293,7 +298,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" width="60" height="60"/>
+        <image name="big_camera" width="99" height="99"/>
         <image name="custom" width="750" height="756"/>
         <image name="moments" width="68" height="68"/>
         <image name="off" width="146" height="87"/>

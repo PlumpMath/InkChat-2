@@ -39,17 +39,16 @@ extension StyleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as StyleCollectionViewCell
         
-        cell.styleLabel.text = results[indexPath.row]
+        cell.styleLabel.text = "  \(results[indexPath.row])  "
+        cell.styleLabel.borderWidth = 1
+        cell.styleLabel.borderColor = UIColor.white
+        cell.styleLabel.clipsToBounds = true
+        
         if (indexPath.row % 2 == 0) {
-            cell.styleLabel.fillColor = UIColor.clear
-            cell.styleLabel.layer.borderColor = UIColor.white.cgColor
             cell.styleLabel.textColor = UIColor.white
-            cell.styleLabel.clipsToBounds = true
         } else {
             cell.styleLabel.fillColor = UIColor.white
             cell.styleLabel.textColor = UIColor.black
-            cell.styleLabel.layer.borderColor = UIColor.white.cgColor
-            cell.styleLabel.clipsToBounds = true
         }
         
         return cell

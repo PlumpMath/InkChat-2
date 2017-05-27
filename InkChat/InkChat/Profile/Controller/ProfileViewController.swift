@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
     @IBAction func infoButtonSelected(_ sender: UIButton) {
         self.resetDefaultImage()
         
-        self.productButton.setImage(#imageLiteral(resourceName: "product_selected"), for: .normal)
+        self.infoButton.setImage(#imageLiteral(resourceName: "info_selected"), for: .normal)
         
         let newController = self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController")
         
@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController {
     @IBAction func favoriteButtonSelected(_ sender: UIButton) {
         self.resetDefaultImage()
         
-        self.productButton.setImage(#imageLiteral(resourceName: "product_selected"), for: .normal)
+        self.favariteButton.setImage(#imageLiteral(resourceName: "favorite_selected"), for: .normal)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newController = storyboard.instantiateViewController(withIdentifier: "TattooCollectionViewController")
@@ -65,12 +65,12 @@ class ProfileViewController: UIViewController {
     @IBAction func chatButtonSelected(_ sender: UIButton) {
         self.resetDefaultImage()
         
-        self.productButton.setImage(#imageLiteral(resourceName: "product_selected"), for: .normal)
+        self.chatButton.setImage(#imageLiteral(resourceName: "chat_selected"), for: .normal)
     }
     
     func resetDefaultImage() {
         self.productButton.setImage(#imageLiteral(resourceName: "product"), for: .normal)
-        self.infoButton.setImage(#imageLiteral(resourceName: "favorite"), for: .normal)
+        self.infoButton.setImage(#imageLiteral(resourceName: "info"), for: .normal)
         self.favariteButton.setImage(#imageLiteral(resourceName: "favorite"), for: .normal)
         self.chatButton.setImage(#imageLiteral(resourceName: "chat"), for: .normal)
         self.productButton.setImage(#imageLiteral(resourceName: "chat"), for: .normal)
