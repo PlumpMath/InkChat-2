@@ -749,7 +749,7 @@ to full type of grid. Black lines never out of date.</string>
         <scene sceneID="xyO-dk-Wdh">
             <objects>
                 <navigationController id="5bj-Mf-DZb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uvH-7T-bp9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvH-7T-bp9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -887,7 +887,7 @@ to full type of grid. Black lines never out of date.</string>
             <objects>
                 <navigationController storyboardIdentifier="MyProfileNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="9Bx-nj-oVm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Te-kA-Qji">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Te-kA-Qji">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

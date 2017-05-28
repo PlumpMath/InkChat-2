@@ -55,9 +55,11 @@ PODS:
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
   - IBAnimatable (4.1.0)
+  - IQKeyboardManagerSwift (4.0.9)
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - JVFloatLabeledTextField (1.1.1)
   - PKHUD (4.2.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -71,7 +73,9 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleSignIn
   - IBAnimatable (~> 4.1.0)
+  - IQKeyboardManagerSwift
   - JSQMessagesViewController
+  - JVFloatLabeledTextField
   - PKHUD (~> 4.2.2)
   - SDWebImage
 
@@ -89,11 +93,13 @@ SPEC CHECKSUMS:
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
   PKHUD: 9a3599e04d57676ec14746c40e423a52fb6588c0
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: ee52e60b87a0abdeb1d5b1c8147aa0687bcd7db5
+PODFILE CHECKSUM: db9cf474023d211a680bb3063d2da86bb006f397
 
 COCOAPODS: 1.2.1
