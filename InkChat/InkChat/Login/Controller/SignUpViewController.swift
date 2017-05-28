@@ -51,6 +51,7 @@ class SignUpViewController: UIViewController {
         
         User.signUpUser(username: username, email: email, password: password, city: city, image: avatarImageView.image!, type: self.userType) { (status) in
             DispatchQueue.main.async {
+                HUD.hide(animated: true)
                 if status {
                     self.performSegue(withIdentifier: "StyleViewControllerSegue", sender: nil)
                 } else {

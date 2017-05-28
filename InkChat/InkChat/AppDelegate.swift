@@ -20,8 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
-        User.downloadAllUsers { (user) in
-            self.users.append(user)
+        DispatchQueue.global().async {
+            User.downloadAllUsers { [weak weakSelf = self] (user) in
+                weakSelf?.users.append(user)
+                let currentUser = Auth.auth().currentUser
+                if currentUser?.uid != nil {
+                    ad.user = ad.users.first(where: { (user) -> Bool in
+                        user.email == currentUser?.email
+                    })
+                }
+            }
         }
         
         return true

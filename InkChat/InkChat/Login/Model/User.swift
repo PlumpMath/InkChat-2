@@ -16,6 +16,7 @@ class User: NSObject {
     var id: String?
     var name: String?
     var email: String?
+    var city: String?
     var profileImageUrl: String?
     var type: String?
     var profileImage: UIImage?
@@ -25,14 +26,16 @@ class User: NSObject {
         self.type = dictionary["type"] as? String
         self.name = dictionary["name"] as? String
         self.email = dictionary["email"] as? String
+        self.city = dictionary["city"] as? String
         self.profileImageUrl = dictionary["profileImageUrl"] as? String
     }
     
     //MARK: Inits
-    init(name: String, email: String, id: String, profileImageUrl: String, profileImage: UIImage, type: String) {
+    init(id: String, name: String, email: String, city: String,profileImageUrl: String, profileImage: UIImage, type: String) {
         self.name = name
         self.email = email
         self.id = id
+        self.city = city
         self.type = type
         self.profileImageUrl = profileImageUrl
         self.profileImage = profileImage
@@ -98,14 +101,16 @@ class User: NSObject {
     }
     
     class func loginUser(userName: String, password: String, completion: @escaping (Bool) -> Swift.Void) {
-        if let user = ad.users.filter({ (user) -> Bool in
+        if let fileUser = ad.users.filter({ (user) -> Bool in
             user.name == userName
         }).first {
-            let email = user.email
-            Auth.auth().signIn(withEmail: email!, password: password, completion: { (user, error) in
+            let email = fileUser.email
+            Auth.auth().signIn(withEmail: email!, password: password, completion: { (userInfo, error) in
                 if error == nil {
-                    let userInfo = ["email": email, "password": password]
-                    UserDefaults.standard.set(userInfo, forKey: "userInformation")
+                    self.info(forUserID: (userInfo?.uid)!, completion: { (user) in
+                        ad.user = user
+                    })
+                    
                     completion(true)
                 } else {
                     HUD.flash(.labeledProgress(title: "Error", subtitle: error?.localizedDescription), delay: 2.0)
@@ -120,16 +125,21 @@ class User: NSObject {
     }
    
     class func loginUser(email: String, password: String, completion: @escaping (Bool) -> Swift.Void) {
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (userInfo, error) in
             if error == nil {
-                let userInfo = ["email": email, "password": password]
-                UserDefaults.standard.set(userInfo, forKey: "userInformation")
+                let userId = userInfo?.uid
+                if let id = Auth.auth().currentUser?.uid {
+                    self.info(forUserID: id, completion: { (user) in
+                       ad.user = user
+                    })
+                }
                 completion(true)
             } else {
                 completion(false)
             }
         })
     }
+    
     
     class func logOutUser(completion: @escaping (Bool) -> Swift.Void) {
         do {
@@ -147,12 +157,13 @@ class User: NSObject {
                 let name = data["name"]!
                 let email = data["email"]!
                 let type = data["type"]!
+                let city = data["city"]!
                 let profileImageUrl = data["profileImageUrl"]!
                 let link = URL.init(string: data["profileImageUrl"]!)
                 URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
                     if error == nil {
                         let profileImage = UIImage(data: data!)
-                        let user = User(name: name, email: email, id: forUserID, profileImageUrl: profileImageUrl, profileImage: profileImage!, type: type)
+                        let user = User(id: forUserID, name: name, email: email, city: city, profileImageUrl: profileImageUrl, profileImage: profileImage!, type: type)
                         completion(user)
                     }
                 }).resume()
@@ -167,13 +178,14 @@ class User: NSObject {
             let credentials = data["credentials"] as! [String: String]
             let name = credentials["name"]!
             let email = credentials["email"]!
+            let city = credentials["city"]!
             let type = credentials["type"]!
             let profileImageUrl = credentials["profileImageUrl"]!
             let link = URL.init(string: profileImageUrl)
             URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
                 if error == nil {
                     let profileImage = UIImage(data: data!)
-                    let user = User(name: name, email: email, id: id, profileImageUrl: profileImageUrl, profileImage: profileImage!, type: type)
+                    let user = User(id: id, name: name, email: email, city: city, profileImageUrl: profileImageUrl, profileImage: profileImage!, type: type)
                     completion(user)
                 }
             }).resume()
@@ -189,12 +201,13 @@ class User: NSObject {
                 let name = credentials["name"]!
                 let email = credentials["email"]!
                 let type = credentials["type"]!
+                let city = credentials["city"]!
                 let profileImageUrl = credentials["profileImageUrl"]!
                 let link = URL.init(string: profileImageUrl)
                 URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
                     if error == nil {
                         let profileImage = UIImage(data: data!)
-                        let user = User(name: name, email: email, id: id, profileImageUrl: profileImageUrl, profileImage: profileImage!, type: type)
+                        let user = User(id: id, name: name, email: email, city: city, profileImageUrl: profileImageUrl, profileImage: profileImage!, type: type)
                         completion(user)
                     }
                 }).resume()

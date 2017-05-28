@@ -15,6 +15,8 @@
 		DE3E6EA61EDA838300C10B3E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */; };
 		DE3E6EA81EDAAE4400C10B3E /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA71EDAAE4400C10B3E /* TypeViewController.swift */; };
 		DE3E6EAA1EDAB59400C10B3E /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA91EDAB59400C10B3E /* PriceViewController.swift */; };
+		DE3E6EAC1EDAC1C500C10B3E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EAB1EDAC1C500C10B3E /* SettingsTableViewController.swift */; };
+		DE3E6EAE1EDADCA100C10B3E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EAD1EDADCA100C10B3E /* Product.swift */; };
 		DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */; };
 		DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5866921ED7BDB700FD57C1 /* Main.storyboard */; };
 		DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */; };
@@ -38,7 +40,7 @@
 		DE6F4EEF1ED8363100313477 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EEE1ED8363100313477 /* CustomViewController.swift */; };
 		DE6F4EF11ED83B8E00313477 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF01ED83B8E00313477 /* FollowViewController.swift */; };
 		DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */; };
-		DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */; };
+		DE6F4EF51ED841E100313477 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF41ED841E100313477 /* MyProfileViewController.swift */; };
 		DE6F4EF71ED8492200313477 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EF61ED8492200313477 /* ProfileViewController.swift */; };
 		DE6F4F021ED8543400313477 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4F001ED8543400313477 /* Login.storyboard */; };
 		DE6F4F041ED8618300313477 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4F031ED8618300313477 /* StyleViewController.swift */; };
@@ -77,6 +79,8 @@
 		DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DE3E6EA71EDAAE4400C10B3E /* TypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
 		DE3E6EA91EDAB59400C10B3E /* PriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
+		DE3E6EAB1EDAC1C500C10B3E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		DE3E6EAD1EDADCA100C10B3E /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DE58668B1ED7BDB700FD57C1 /* InkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5866931ED7BDB700FD57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +111,7 @@
 		DE6F4EEE1ED8363100313477 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		DE6F4EF01ED83B8E00313477 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		DE6F4EF21ED83C9D00313477 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
-		DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewController.swift; sourceTree = "<group>"; };
+		DE6F4EF41ED841E100313477 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		DE6F4EF61ED8492200313477 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DE6F4F011ED8543400313477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = InkChat/Base.lproj/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		DE6F4F031ED8618300313477 /* StyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
@@ -299,8 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				DE6F4EF01ED83B8E00313477 /* FollowViewController.swift */,
-				DE6F4EF41ED841E100313477 /* ShowCollectionViewController.swift */,
+				DE6F4EF41ED841E100313477 /* MyProfileViewController.swift */,
 				DE6F4EF61ED8492200313477 /* ProfileViewController.swift */,
+				DE3E6EAB1EDAC1C500C10B3E /* SettingsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 		DE6F4EDF1ED8021800313477 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE3E6EAD1EDADCA100C10B3E /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -681,6 +687,7 @@
 				DE6F4EF71ED8492200313477 /* ProfileViewController.swift in Sources */,
 				DE6F4F081ED8654700313477 /* LoginViewController.swift in Sources */,
 				DE5866C61ED7D72900FD57C1 /* MainTableViewCell.swift in Sources */,
+				DE3E6EAC1EDAC1C500C10B3E /* SettingsTableViewController.swift in Sources */,
 				DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */,
 				DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */,
 				DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */,
@@ -689,11 +696,12 @@
 				DE6F4F061ED863AD00313477 /* StyleCollectionViewCell.swift in Sources */,
 				DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */,
 				DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */,
-				DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */,
+				DE6F4EF51ED841E100313477 /* MyProfileViewController.swift in Sources */,
 				DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */,
 				DE3E6EA81EDAAE4400C10B3E /* TypeViewController.swift in Sources */,
 				DE6F4EF11ED83B8E00313477 /* FollowViewController.swift in Sources */,
 				DE3E6EA41EDA7F3D00C10B3E /* User.swift in Sources */,
+				DE3E6EAE1EDADCA100C10B3E /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

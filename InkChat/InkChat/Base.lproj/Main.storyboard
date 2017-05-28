@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MyProfileNavigationViewController-->
+        <scene sceneID="vhT-66-eIP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="MyProfileNavigationViewController" id="kp4-g1-cpL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AsV-m2-Duq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="-560"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="ecx-NV-IMR">
             <objects>
@@ -51,12 +59,14 @@
                     </navigationItem>
                     <connections>
                         <segue destination="K6l-UU-tBp" kind="custom" customClass="PresentSlideSegue" customModule="IBAnimatable" id="fgT-my-h0q"/>
+                        <segue destination="UXq-eC-ro6" kind="show" identifier="LoginSegue" id="j5n-Kr-JJO"/>
+                        <segue destination="kp4-g1-cpL" kind="custom" identifier="MyProfileSegue" customClass="PresentFadeSegue" customModule="IBAnimatable" id="dfZ-VX-Y3i"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="en4-uB-Ins" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="FQy-Bj-DVt">
                     <connections>
-                        <segue destination="UXq-eC-ro6" kind="custom" customClass="PresentFadeSegue" customModule="IBAnimatable" id="Lkr-dn-rsg"/>
+                        <action selector="swipRight:" destination="NlD-Ug-Lmb" id="vEC-Xe-jew"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="1yo-lK-cGV">

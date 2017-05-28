@@ -1,5 +1,5 @@
 //
-//  ShowCollectionViewController.swift
+//  MyProfileViewController.swift
 //  InkChat
 //
 //  Created by iOS Dev Log on 2017/5/26.
@@ -7,24 +7,22 @@
 //
 
 import UIKit
+import SDWebImage
 
-
-class ShowCollectionViewController: UIViewController {
+class MyProfileViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var updateStackView: UIStackView!
     
     var screenWidth: CGFloat = 320.0
-    var results = [Int]()
+    var products = [Product]()
     var imagePicker: UIImagePickerController!
     var selectedImage: UIImage!
     
+    var isMyProfile: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for _ in 0..<5 {
-            results.append(Int(arc4random_uniform(4) + 1))
-        }
         
         self.imagePicker = UIImagePickerController()
         self.imagePicker.allowsEditing = true
@@ -68,58 +66,64 @@ class ShowCollectionViewController: UIViewController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension ShowCollectionViewController: UICollectionViewDataSource {
+extension MyProfileViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return results.count + 1
+        var itemCount = products.count
+        if isMyProfile {
+            itemCount += 1
+        }
+        return itemCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as TattooCollectionViewCell
         
-        if indexPath.row == results.count {
+        if indexPath.row == products.count {
             cell.tattooImageView.image = #imageLiteral(resourceName: "add")
-        } else if indexPath.row > 4 {
-            cell.tattooImageView.image = self.selectedImage
-            
         } else {
-            let randomIndex = results[indexPath.row]
-            cell.tattooImageView.image = UIImage(named: "show_\(randomIndex)")
+            let product = products[indexPath.row]
+            cell.tattooImageView.sd_setImage(with: URL(string: product.productImageUrl!), placeholderImage: #imageLiteral(resourceName: "show_1"))
         }
+
         
         return cell
     }
 }
 
 // MAKR: - UICollectionViewDelegate
-extension ShowCollectionViewController: UICollectionViewDelegate {
+extension MyProfileViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        if indexPath.row == results.count {
+        if indexPath.row == products.count {
             self.updateStackView.isHidden = false
         }
     }
 }
 
 
-extension ShowCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension MyProfileViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = (screenWidth - 2) / 2
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }
 
-extension ShowCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MyProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker.dismiss(animated: true, completion: nil)
     }
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             selectedImage = image
-            self.results.append(1)
+            Product.updateProduct(image: image) { (product) in
+                self.products.append(product)
+                self.collectionView.reloadData()
+            }
         } else {
             print("JESS: A valid image wasn't selected")
         }

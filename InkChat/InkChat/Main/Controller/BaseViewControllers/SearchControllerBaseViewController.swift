@@ -11,17 +11,13 @@ import UIKit
 class SearchControllerBaseViewController: UITableViewController {
     // MARK: - Properties
 
-    var allResults: [String] = []
+    var allResults: [Product] = []
 
-    lazy var visibleResults: [String] = self.allResults
+    lazy var visibleResults: [Product] = self.allResults
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 1..<100 {
-            allResults.append("Rosella Sems \(i)")
-            allResults.append("George \(i)")
-        }
         
         self.tableView.register(MainTableViewCell.self)
         self.tableView.estimatedRowHeight = 225
@@ -53,16 +49,11 @@ class SearchControllerBaseViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as MainTableViewCell
         
-        let result = visibleResults[indexPath.row]
-        cell.nameLabel.text = result
+        let product = visibleResults[indexPath.row]
+        cell.nameLabel.text = product.name
+        cell.locationLabel.text = product.city
         
-        if result.contains("George") {
-            cell.backgroundImage.image = #imageLiteral(resourceName: "main_1")
-            cell.favoriteButton.setImage(#imageLiteral(resourceName: "heart_black"), for: .normal)
-        } else {
-            cell.backgroundImage.image = #imageLiteral(resourceName: "main_2")
-            cell.favoriteButton.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
-        }
+        cell.backgroundImage.sd_setImage(with: URL(string: product.productImageUrl!), placeholderImage: #imageLiteral(resourceName: "show_1"))
         
         return cell
     }

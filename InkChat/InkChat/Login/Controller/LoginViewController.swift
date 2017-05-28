@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
         }
         
         User.loginUser(userName: username, password: password) { (status) in
+            HUD.hide(animated: true)
             if status {
                 self.dismiss(animated: true, completion: nil)
             } else {

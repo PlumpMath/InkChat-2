@@ -209,11 +209,6 @@ to full type of grid. Black lines never out of date.</string>
                                 <segue destination="EFu-Oh-m3c" kind="show" id="ae1-5h-UMI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="setting" id="fLe-gg-kKa">
-                            <connections>
-                                <segue destination="FO6-BP-dMX" kind="show" id="j4o-5v-gzx"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chatButton" destination="WLV-e3-f7L" id="qxd-bg-hng"/>
@@ -235,101 +230,65 @@ to full type of grid. Black lines never out of date.</string>
         <!--Setting-->
         <scene sceneID="qgE-sM-8eX">
             <objects>
-                <tableViewController title="Setting" id="FO6-BP-dMX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JXA-RO-OOt">
+                <tableViewController storyboardIdentifier="SettingsTableViewController" title="Setting" id="FO6-BP-dMX" customClass="SettingsTableViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="JXA-RO-OOt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="NcO-vx-shA">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="AmP-Ha-zgD" style="IBUITableViewCellStyleDefault" id="GHV-xa-wIe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHV-xa-wIe" id="T5r-I2-n2h">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="section0" textLabel="AmP-Ha-zgD" style="IBUITableViewCellStyleDefault" id="GHV-xa-wIe">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHV-xa-wIe" id="T5r-I2-n2h">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AmP-Ha-zgD">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AmP-Ha-zgD">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="vz7-fi-Ifh" style="IBUITableViewCellStyleDefault" id="MO3-0r-Mkk">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MO3-0r-Mkk" id="CDO-Fd-pnV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vz7-fi-Ifh">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="wRM-ro-MBY" kind="show" id="8KM-Rf-ABD"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="btj-He-gaV">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="V6m-DR-LY5" style="IBUITableViewCellStyleDefault" id="aZh-SO-L9z">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aZh-SO-L9z" id="JoB-SS-Kl9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V6m-DR-LY5">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mDP-Gy-G3H" style="IBUITableViewCellStyleDefault" id="0gd-g0-vDq">
-                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0gd-g0-vDq" id="Eei-ql-A1I">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mDP-Gy-G3H">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="section1" id="jJo-a5-x0C">
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="center" tableViewCell="jJo-a5-x0C" id="FQS-DN-piz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bf-Pw-9ci">
+                                            <rect key="frame" x="158.5" y="11.5" width="58" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3bf-Pw-9ci" firstAttribute="centerX" secondItem="FQS-DN-piz" secondAttribute="centerX" id="DnH-sU-Yku"/>
+                                        <constraint firstItem="3bf-Pw-9ci" firstAttribute="centerY" secondItem="FQS-DN-piz" secondAttribute="centerY" id="qgI-0I-FoM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="FO6-BP-dMX" id="dLF-sr-CNV"/>
                             <outlet property="delegate" destination="FO6-BP-dMX" id="b28-gp-0XF"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="wRM-ro-MBY" kind="show" identifier="PriceSegue" id="a1P-eh-JTH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYs-gf-FtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="-475"/>
+            <point key="canvasLocation" x="889" y="-1961"/>
         </scene>
         <!--Price-->
         <scene sceneID="hbY-0X-sCS">
@@ -449,7 +408,7 @@ to full type of grid. Black lines never out of date.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCg-p5-k45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666" y="-475"/>
+            <point key="canvasLocation" x="1687" y="-1961"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ARE-op-urp">
@@ -641,7 +600,7 @@ to full type of grid. Black lines never out of date.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud6-fA-Dld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="132"/>
+            <point key="canvasLocation" x="926" y="-432"/>
         </scene>
         <!--Map-->
         <scene sceneID="Fka-LR-ajf">
@@ -656,7 +615,7 @@ to full type of grid. Black lines never out of date.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r21-W4-fGi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4as-RB-a2z">
                                 <rect key="frame" x="139.5" y="285.5" width="97" height="97"/>
@@ -704,7 +663,7 @@ to full type of grid. Black lines never out of date.</string>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GoY-Ga-ErZ">
-                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="527"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -784,13 +743,13 @@ to full type of grid. Black lines never out of date.</string>
                 <viewControllerPlaceholder id="2sH-W2-LUP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRd-zj-Q5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-771" y="-954"/>
+            <point key="canvasLocation" x="1056" y="-43"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xyO-dk-Wdh">
             <objects>
                 <navigationController id="5bj-Mf-DZb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvH-7T-bp9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uvH-7T-bp9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -802,10 +761,10 @@ to full type of grid. Black lines never out of date.</string>
             </objects>
             <point key="canvasLocation" x="-798" y="-475"/>
         </scene>
-        <!--Show Collection View Controller-->
+        <!--My Profile-->
         <scene sceneID="ECJ-5p-Ng0">
             <objects>
-                <viewController storyboardIdentifier="ShowCollectionViewController" id="xmI-ia-GbH" customClass="ShowCollectionViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyProfileViewController" id="xmI-ia-GbH" customClass="MyProfileViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k1v-d6-W8i"/>
                         <viewControllerLayoutGuide type="bottom" id="e15-HR-cAa"/>
@@ -815,8 +774,9 @@ to full type of grid. Black lines never out of date.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rJt-ZW-mcM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" red="0.89016014340000005" green="0.87061083319999999" blue="0.8706054688" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="0vP-ja-x5z">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -824,6 +784,9 @@ to full type of grid. Black lines never out of date.</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jim-pc-rMF" appends="YES" id="uzK-yg-7M5"/>
+                                </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="klG-i3-5WX">
                                 <rect key="frame" x="107.5" y="263.5" width="160" height="140"/>
@@ -867,7 +830,7 @@ to full type of grid. Black lines never out of date.</string>
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-bi-9Tx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="10"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="10"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="hYN-ga-wdW"/>
@@ -877,6 +840,7 @@ to full type of grid. Black lines never out of date.</string>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="w9z-bi-9Tx" secondAttribute="trailing" id="JXr-rG-h9X"/>
                             <constraint firstAttribute="trailing" secondItem="rJt-ZW-mcM" secondAttribute="trailing" id="KaR-7K-7eh"/>
@@ -889,14 +853,52 @@ to full type of grid. Black lines never out of date.</string>
                             <constraint firstItem="e15-HR-cAa" firstAttribute="top" secondItem="rJt-ZW-mcM" secondAttribute="bottom" id="w8q-O4-HxS"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="My Profile" id="dWl-pw-VpD">
+                        <barButtonItem key="leftBarButtonItem" image="tattoo" id="DME-kn-9rO">
+                            <connections>
+                                <segue destination="EFu-Oh-m3c" kind="show" id="5X6-P9-fhM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="setting" id="ufo-f1-8FT">
+                            <connections>
+                                <segue destination="FO6-BP-dMX" kind="show" id="OEi-D5-IKD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="collectionView" destination="rJt-ZW-mcM" id="M9x-Ar-tiw"/>
+                        <outlet property="collectionView" destination="rJt-ZW-mcM" id="ckX-Eg-bXL"/>
                         <outlet property="updateStackView" destination="klG-i3-5WX" id="FKi-Ib-KKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOI-6J-WKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ndR-Oj-Pmr" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="jim-pc-rMF">
+                    <connections>
+                        <segue destination="ndR-Oj-Pmr" kind="unwind" unwindAction="dismissCurrentViewController:" id="Yr7-Q6-j0e"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-799" y="296"/>
+            <point key="canvasLocation" x="46" y="-1961"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c3b-Yw-fy3">
+            <objects>
+                <navigationController storyboardIdentifier="MyProfileNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="9Bx-nj-oVm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Te-kA-Qji">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xmI-ia-GbH" kind="relationship" relationship="rootViewController" id="yxm-3s-Ron"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yO2-NG-evP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="-1961"/>
         </scene>
     </scenes>
     <resources>
@@ -917,4 +919,7 @@ to full type of grid. Black lines never out of date.</string>
         <image name="tattoo" width="26" height="24"/>
         <image name="video" width="60" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5X6-P9-fhM"/>
+    </inferredMetricsTieBreakers>
 </document>
