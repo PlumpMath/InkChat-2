@@ -12,6 +12,7 @@ target 'InkChat' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'SDWebImage'
+  pod 'PKHUD', '~> 4.2.2'
 
   # Pods for InkChat
 

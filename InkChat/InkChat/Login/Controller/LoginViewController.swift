@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import PKHUD
 
 class LoginViewController: UIViewController {
 
@@ -17,37 +18,26 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.backgroundColor = nil
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     }
     
     @IBAction func login(_ sender: UIButton) {
-            guard let email = usernameTextField.text, let password = passwordTextField.text else {
-                print("Form is not valid")
-                return
-            }
-            
-            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                if error != nil {
-                    print(error ?? "")
-                    return
-                }
-                
+        HUD.show(.progress)
+        guard let username = usernameTextField.text, let password = passwordTextField.text else {
+            print("Form is not valid")
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "Form is not valid"), delay: 2.0)
+            return
+        }
+        
+        User.loginUser(userName: username, password: password) { (status) in
+            if status {
                 self.dismiss(animated: true, completion: nil)
-                
-            })
-            
+            } else {
+                HUD.flash(.error, delay: 1.0)
+            }
+        }
     }
 
 }

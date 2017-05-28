@@ -122,7 +122,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="CVY-MT-rTs" kind="show" id="mpC-3g-8Bs"/>
+                                                    <segue destination="JBP-vx-xfq" kind="show" id="9FY-dk-2GN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSd-2N-6qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="208.24587706146929"/>
+            <point key="canvasLocation" x="-89" y="205"/>
         </scene>
         <!--Style-->
         <scene sceneID="nMp-sC-v94">
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="width" constant="240" id="8oI-yI-v2S"/>
                                             <constraint firstAttribute="height" constant="35" id="AQW-nD-jCY"/>
                                         </constraints>
-                                        <state key="normal" title="Next"/>
+                                        <state key="normal" title="All"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
@@ -255,7 +255,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="7ab-wi-1nv" kind="show" id="nZK-kc-Bgc"/>
+                                            <action selector="selectAllStyles:" destination="vCd-WW-cza" eventType="touchUpInside" id="y0r-8b-0Tk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -282,10 +282,18 @@
                             <constraint firstItem="Xv2-Jf-GDE" firstAttribute="height" secondItem="jRb-wW-dmm" secondAttribute="height" id="vfx-bA-uI4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Style" id="DeK-9b-zCo"/>
+                    <navigationItem key="navigationItem" title="Style" id="DeK-9b-zCo">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="sg4-oO-y7J">
+                            <connections>
+                                <action selector="rightButtonClicked:" destination="vCd-WW-cza" id="8V8-dP-FAG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Rg4-h6-0cr" id="ewx-jx-gYr"/>
                         <outlet property="flowLayout" destination="yLp-mP-KN2" id="lfy-aE-Hnz"/>
+                        <outlet property="rightButtonItem" destination="sg4-oO-y7J" id="C1d-S3-QHl"/>
+                        <segue destination="7ab-wi-1nv" kind="show" identifier="PriceViewControllerSegue" id="Tej-Yf-QEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmu-U0-bX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,7 +303,7 @@
         <!--Price-->
         <scene sceneID="9Uv-Xg-2Ft">
             <objects>
-                <viewController id="7ab-wi-1nv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PriceViewController" id="7ab-wi-1nv" customClass="PriceViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OIu-kA-e8F"/>
                         <viewControllerLayoutGuide type="bottom" id="PfN-qQ-Hkk"/>
@@ -314,25 +322,28 @@
                                         <rect key="frame" x="20" y="0.0" width="335" height="572"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500RMB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a3-kq-l8b">
-                                                <rect key="frame" x="0.0" y="297" width="67" height="21"/>
+                                                <rect key="frame" x="0.0" y="301" width="67" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000RMB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVv-He-MNa">
-                                                <rect key="frame" x="257.5" y="297" width="77.5" height="21"/>
+                                                <rect key="frame" x="257.5" y="301" width="77.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="800RMB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-y7-wrX">
-                                                <rect key="frame" x="112" y="250" width="68" height="20.5"/>
+                                                <rect key="frame" x="133.5" y="250" width="68" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iib-ce-iPr">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="800" minValue="500" maxValue="5000" translatesAutoresizingMaskIntoConstraints="NO" id="iib-ce-iPr">
                                                 <rect key="frame" x="28" y="271" width="279" height="31"/>
+                                                <connections>
+                                                    <action selector="choosePrice:" destination="7ab-wi-1nv" eventType="valueChanged" id="nJy-ya-GL7"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -340,11 +351,10 @@
                                             <constraint firstItem="iib-ce-iPr" firstAttribute="leading" secondItem="drs-XZ-RiO" secondAttribute="leading" constant="30" id="5KI-gQ-9Xr"/>
                                             <constraint firstItem="5a3-kq-l8b" firstAttribute="leading" secondItem="drs-XZ-RiO" secondAttribute="leading" id="7ve-7A-rxD"/>
                                             <constraint firstItem="iib-ce-iPr" firstAttribute="centerX" secondItem="drs-XZ-RiO" secondAttribute="centerX" id="86N-9X-Ngl"/>
-                                            <constraint firstItem="UVv-He-MNa" firstAttribute="top" secondItem="iib-ce-iPr" secondAttribute="bottom" constant="-4" id="DYB-98-IMc"/>
-                                            <constraint firstItem="euZ-y7-wrX" firstAttribute="leading" secondItem="drs-XZ-RiO" secondAttribute="leading" constant="112" id="Iqx-BT-xDD"/>
+                                            <constraint firstItem="euZ-y7-wrX" firstAttribute="centerX" secondItem="iib-ce-iPr" secondAttribute="centerX" id="COE-h8-MJM"/>
+                                            <constraint firstItem="UVv-He-MNa" firstAttribute="top" secondItem="iib-ce-iPr" secondAttribute="bottom" id="DYB-98-IMc"/>
                                             <constraint firstItem="iib-ce-iPr" firstAttribute="top" secondItem="euZ-y7-wrX" secondAttribute="bottom" constant="0.5" id="QIM-nc-7DW"/>
-                                            <constraint firstItem="5a3-kq-l8b" firstAttribute="top" secondItem="iib-ce-iPr" secondAttribute="bottom" constant="-4" id="TMu-Fw-Hwc"/>
-                                            <constraint firstItem="euZ-y7-wrX" firstAttribute="top" secondItem="drs-XZ-RiO" secondAttribute="top" constant="250" id="XMo-vU-qJf"/>
+                                            <constraint firstItem="5a3-kq-l8b" firstAttribute="top" secondItem="iib-ce-iPr" secondAttribute="bottom" id="TMu-Fw-Hwc"/>
                                             <constraint firstItem="iib-ce-iPr" firstAttribute="centerY" secondItem="drs-XZ-RiO" secondAttribute="centerY" id="Y7F-nw-esk"/>
                                             <constraint firstAttribute="trailing" secondItem="UVv-He-MNa" secondAttribute="trailing" id="yAX-1r-xP9"/>
                                         </constraints>
@@ -394,11 +404,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Price" id="qbq-8A-V9g"/>
+                    <connections>
+                        <outlet property="priceLabel" destination="euZ-y7-wrX" id="xUX-PS-bRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9b4-9Z-mvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="HRV-qC-M4T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3244" y="214"/>
+            <point key="canvasLocation" x="3260" y="206"/>
         </scene>
         <!--About You-->
         <scene sceneID="J3U-4j-xgQ">
@@ -603,7 +616,113 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm9-5A-ZKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.799999999999997" y="208.24587706146929"/>
+            <point key="canvasLocation" x="-834" y="206"/>
+        </scene>
+        <!--Type View Controller-->
+        <scene sceneID="lJN-3f-fs5">
+            <objects>
+                <viewController storyboardIdentifier="TypeViewController" id="JBP-vx-xfq" customClass="TypeViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sL0-9o-qXB"/>
+                        <viewControllerLayoutGuide type="bottom" id="yiG-7Q-Goq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tvh-FK-Ou5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-0T-hKb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-bD-mg3">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="cL6-j6-pON">
+                                        <rect key="frame" x="67.5" y="265.5" width="240" height="56"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="pvy-Eg-AAR">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="56"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="d7X-LV-FWw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-Kr-hxK">
+                                        <rect key="frame" x="67.5" y="527" width="240" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dO-ZM-MBW" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="DdV-Z6-pjx"/>
+                                                </constraints>
+                                                <state key="normal" title="User"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signUpUser:" destination="JBP-vx-xfq" eventType="touchUpInside" id="PHk-n1-FAX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1I-um-Xgi" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="45" width="240" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="FqY-jx-6Bj"/>
+                                                </constraints>
+                                                <state key="normal" title="Artist"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="artistSignUp:" destination="JBP-vx-xfq" eventType="touchUpInside" id="SmI-1h-cVV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gBE-Kr-hxK" secondAttribute="bottom" constant="60" id="3Nu-l3-bil"/>
+                                    <constraint firstItem="cL6-j6-pON" firstAttribute="centerY" secondItem="6b0-bD-mg3" secondAttribute="centerY" constant="-40" id="4fg-WZ-tht"/>
+                                    <constraint firstItem="cL6-j6-pON" firstAttribute="centerX" secondItem="6b0-bD-mg3" secondAttribute="centerX" id="9qU-q4-iVA"/>
+                                    <constraint firstItem="gBE-Kr-hxK" firstAttribute="centerX" secondItem="6b0-bD-mg3" secondAttribute="centerX" id="NJy-0d-LIR"/>
+                                    <constraint firstItem="gBE-Kr-hxK" firstAttribute="width" secondItem="cL6-j6-pON" secondAttribute="width" id="c4U-pn-Tqa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C1u-0T-hKb" firstAttribute="centerX" secondItem="tvh-FK-Ou5" secondAttribute="centerX" id="B7o-K1-V3u"/>
+                            <constraint firstItem="C1u-0T-hKb" firstAttribute="centerY" secondItem="tvh-FK-Ou5" secondAttribute="centerY" id="HSy-o4-gk1"/>
+                            <constraint firstItem="6b0-bD-mg3" firstAttribute="height" secondItem="C1u-0T-hKb" secondAttribute="height" id="Kr1-1D-VgA"/>
+                            <constraint firstItem="6b0-bD-mg3" firstAttribute="width" secondItem="C1u-0T-hKb" secondAttribute="width" id="Spy-9a-7wh"/>
+                            <constraint firstItem="6b0-bD-mg3" firstAttribute="centerX" secondItem="C1u-0T-hKb" secondAttribute="centerX" id="Wfc-KH-9Ca"/>
+                            <constraint firstItem="C1u-0T-hKb" firstAttribute="width" secondItem="tvh-FK-Ou5" secondAttribute="width" id="Xn0-l2-O3a"/>
+                            <constraint firstItem="C1u-0T-hKb" firstAttribute="height" secondItem="tvh-FK-Ou5" secondAttribute="height" id="bHx-fK-zBr"/>
+                            <constraint firstItem="6b0-bD-mg3" firstAttribute="centerY" secondItem="C1u-0T-hKb" secondAttribute="centerY" id="g0V-c7-WnZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kgz-GI-aXD"/>
+                    <connections>
+                        <segue destination="CVY-MT-rTs" kind="show" identifier="SignUpViewControllerSegue" id="YNM-59-3sh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7YF-Su-NIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="206"/>
         </scene>
     </scenes>
     <resources>

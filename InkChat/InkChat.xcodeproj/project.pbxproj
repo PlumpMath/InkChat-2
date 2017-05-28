@@ -13,6 +13,8 @@
 		DE3E6EA21EDA7EC500C10B3E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EE11ED8023F00313477 /* Profile.storyboard */; };
 		DE3E6EA41EDA7F3D00C10B3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA31EDA7F3D00C10B3E /* User.swift */; };
 		DE3E6EA61EDA838300C10B3E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */; };
+		DE3E6EA81EDAAE4400C10B3E /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA71EDAAE4400C10B3E /* TypeViewController.swift */; };
+		DE3E6EAA1EDAB59400C10B3E /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA91EDAB59400C10B3E /* PriceViewController.swift */; };
 		DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */; };
 		DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5866921ED7BDB700FD57C1 /* Main.storyboard */; };
 		DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */; };
@@ -73,6 +75,8 @@
 		DB9CCE2F8417C33343C911AD /* Pods-InkChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE3E6EA31EDA7F3D00C10B3E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DE3E6EA71EDAAE4400C10B3E /* TypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
+		DE3E6EA91EDAB59400C10B3E /* PriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		DE58668B1ED7BDB700FD57C1 /* InkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5866931ED7BDB700FD57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 				DE6F4F031ED8618300313477 /* StyleViewController.swift */,
 				DE6F4F071ED8654700313477 /* LoginViewController.swift */,
 				DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */,
+				DE3E6EA71EDAAE4400C10B3E /* TypeViewController.swift */,
+				DE3E6EA91EDAB59400C10B3E /* PriceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -678,12 +684,14 @@
 				DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */,
 				DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */,
 				DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */,
+				DE3E6EAA1EDAB59400C10B3E /* PriceViewController.swift in Sources */,
 				DE6F4F041ED8618300313477 /* StyleViewController.swift in Sources */,
 				DE6F4F061ED863AD00313477 /* StyleCollectionViewCell.swift in Sources */,
 				DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */,
 				DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */,
 				DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */,
 				DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */,
+				DE3E6EA81EDAAE4400C10B3E /* TypeViewController.swift in Sources */,
 				DE6F4EF11ED83B8E00313477 /* FollowViewController.swift in Sources */,
 				DE3E6EA41EDA7F3D00C10B3E /* User.swift in Sources */,
 			);

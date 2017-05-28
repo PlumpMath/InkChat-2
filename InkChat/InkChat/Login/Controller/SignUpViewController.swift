@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import PKHUD
 
 class SignUpViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBOutlet weak var chooseAvatarImageView: UIImageView!
+    
+    var userType: String = "artist"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,56 +42,22 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: UIButton) {
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = usernameTextField.text, let city = cityTextField.text else {
+        HUD.show(.progress)
+        guard let email = emailTextField.text, let password = passwordTextField.text, let username = usernameTextField.text, let city = cityTextField.text else {
             print("Form is not valid")
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "Form is not valid"), delay: 2.0)
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            if error != nil {
-                print(error!)
-                return
+        User.signUpUser(username: username, email: email, password: password, city: city, image: avatarImageView.image!, type: self.userType) { (status) in
+            DispatchQueue.main.async {
+                if status {
+                    self.performSegue(withIdentifier: "StyleViewControllerSegue", sender: nil)
+                } else {
+                    HUD.flash(.error, delay: 1.0)
+                }
             }
-            
-            guard let uid = user?.uid else {
-                return
-            }
-            
-            //successfully authenticated user
-            let imageName = UUID().uuidString
-            let storageRef = Storage.storage().reference().child("avatar_images").child("\(imageName).jpg")
-            
-            if let profileImage = self.avatarImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
-                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-                    if error != nil {
-                        print(error!)
-                        return
-                    }
-                    
-                    if let avatarImageUrl = metadata?.downloadURL()?.absoluteString {
-                        let values = ["name": name, "email": email, "avatarImageUrl": avatarImageUrl, "city": city]
-                        self.registerUserIntoDatabaseWithUID(uid, values: values as [String : AnyObject])
-                    }
-                })
-            }
-        })
-    }
-    
-    fileprivate func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
-        let ref = Database.database().reference()
-        let usersReference = ref.child("users").child(uid)
-        
-        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-            
-            if err != nil {
-                print(err!)
-                return
-            }
-            
-            ad.user = User(dictionary: values)
-            
-            self.performSegue(withIdentifier: "StyleViewControllerSegue", sender: nil)
-        })
+        }
     }
 }
 
