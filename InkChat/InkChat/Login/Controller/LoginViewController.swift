@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +30,24 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    @IBAction func login(_ sender: UIButton) {
+            guard let email = usernameTextField.text, let password = passwordTextField.text else {
+                print("Form is not valid")
+                return
+            }
+            
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error != nil {
+                    print(error ?? "")
+                    return
+                }
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            })
+            
     }
 
 }

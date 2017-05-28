@@ -10,6 +10,9 @@
 		5594DD8100014EDF7881A4E6 /* Pods_InkChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509B51E4D1580933001BA945 /* Pods_InkChatUITests.framework */; };
 		7F81F42075E03968BE842FB8 /* Pods_InkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6F34CA4C5717511B6A3EA2 /* Pods_InkChat.framework */; };
 		B1ECA7205701B7C8B807AE4C /* Pods_InkChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33219DEFF5482D44CCE2FBD1 /* Pods_InkChatTests.framework */; };
+		DE3E6EA21EDA7EC500C10B3E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EE11ED8023F00313477 /* Profile.storyboard */; };
+		DE3E6EA41EDA7F3D00C10B3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA31EDA7F3D00C10B3E /* User.swift */; };
+		DE3E6EA61EDA838300C10B3E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */; };
 		DE58668F1ED7BDB700FD57C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */; };
 		DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5866921ED7BDB700FD57C1 /* Main.storyboard */; };
 		DE5866971ED7BDB700FD57C1 /* InkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5866951ED7BDB700FD57C1 /* InkChat.xcdatamodeld */; };
@@ -26,7 +29,6 @@
 		DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58674F1ED7E17500FD57C1 /* UICollectionView+Ext.swift */; };
 		DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5867511ED7E1A700FD57C1 /* UITableView+Ext.swift */; };
 		DE5867541ED7E33E00FD57C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5866C01ED7C2D100FD57C1 /* MainViewController.swift */; };
-		DE6F4EE21ED8023F00313477 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EE11ED8023F00313477 /* Profile.storyboard */; };
 		DE6F4EE51ED8157500313477 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6F4EE41ED8157500313477 /* MapKit.framework */; };
 		DE6F4EE71ED8167A00313477 /* TattooCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */; };
 		DE6F4EEC1ED816F600313477 /* TattooCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */; };
@@ -69,6 +71,8 @@
 		7A6F34CA4C5717511B6A3EA2 /* Pods_InkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC58A2858F0C255140D1BE70 /* Pods-InkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InkChat/Pods-InkChat.debug.xcconfig"; sourceTree = "<group>"; };
 		DB9CCE2F8417C33343C911AD /* Pods-InkChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE3E6EA31EDA7F3D00C10B3E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DE58668B1ED7BDB700FD57C1 /* InkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE58668E1ED7BDB700FD57C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5866931ED7BDB700FD57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,7 +95,7 @@
 		DE58674B1ED7E14F00FD57C1 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		DE58674F1ED7E17500FD57C1 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DE5867511ED7E1A700FD57C1 /* UITableView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
-		DE6F4EE11ED8023F00313477 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DE6F4EE11ED8023F00313477 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		DE6F4EE41ED8157500313477 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DE6F4EE61ED8167A00313477 /* TattooCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TattooCollectionViewController.swift; sourceTree = "<group>"; };
 		DE6F4EEA1ED816F600313477 /* TattooCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TattooCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 			children = (
 				DE6F4F031ED8618300313477 /* StyleViewController.swift */,
 				DE6F4F071ED8654700313477 /* LoginViewController.swift */,
+				DE3E6EA51EDA838300C10B3E /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 		DE6F4EFB1ED8537200313477 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE3E6EA31EDA7F3D00C10B3E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -477,9 +483,9 @@
 			files = (
 				DE58669C1ED7BDB700FD57C1 /* LaunchScreen.storyboard in Resources */,
 				DEDD8E211ED980E900AE8FF0 /* GoogleService-Info.plist in Resources */,
+				DE3E6EA21EDA7EC500C10B3E /* Profile.storyboard in Resources */,
 				DE5866991ED7BDB700FD57C1 /* Assets.xcassets in Resources */,
 				DE6F4F021ED8543400313477 /* Login.storyboard in Resources */,
-				DE6F4EE21ED8023F00313477 /* Profile.storyboard in Resources */,
 				DE6F4EED1ED816F600313477 /* TattooCollectionViewCell.xib in Resources */,
 				DE5867181ED7DDD700FD57C1 /* MainTableViewCell.xib in Resources */,
 				DE5866941ED7BDB700FD57C1 /* Main.storyboard in Resources */,
@@ -658,6 +664,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3E6EA61EDA838300C10B3E /* SignUpViewController.swift in Sources */,
 				DE58674D1ED7E14F00FD57C1 /* NibLoadableView.swift in Sources */,
 				DE5867161ED7DCEC00FD57C1 /* SearchResultsViewController.swift in Sources */,
 				DE6F4EE71ED8167A00313477 /* TattooCollectionViewController.swift in Sources */,
@@ -678,6 +685,7 @@
 				DE6F4EF51ED841E100313477 /* ShowCollectionViewController.swift in Sources */,
 				DE6F4EF31ED83C9D00313477 /* FollowTableViewCell.swift in Sources */,
 				DE6F4EF11ED83B8E00313477 /* FollowViewController.swift in Sources */,
+				DE3E6EA41EDA7F3D00C10B3E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

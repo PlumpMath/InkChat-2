@@ -71,7 +71,7 @@
         <scene sceneID="7za-We-y7U">
             <objects>
                 <collectionViewController storyboardIdentifier="TattooCollectionViewController" title="No Tear" id="uYa-xN-xkc" customClass="TattooCollectionViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eS8-nE-JJn">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="eS8-nE-JJn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89016014337539673" green="0.87061083316802979" blue="0.87060546875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -283,7 +283,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G80-FC-07V" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xql-Ri-Gp5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xql-Ri-Gp5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
