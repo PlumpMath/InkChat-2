@@ -11,6 +11,7 @@
 		7F81F42075E03968BE842FB8 /* Pods_InkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6F34CA4C5717511B6A3EA2 /* Pods_InkChat.framework */; };
 		B1ECA7205701B7C8B807AE4C /* Pods_InkChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33219DEFF5482D44CCE2FBD1 /* Pods_InkChatTests.framework */; };
 		DE21F45F1EDD8A9E00D2A8EF /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21F45E1EDD8A9E00D2A8EF /* UserInfoViewController.swift */; };
+		DE21F4611EDDA5BE00D2A8EF /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21F4601EDDA5BE00D2A8EF /* Double+Ext.swift */; };
 		DE24F55C1EDD5DD500D0CC7D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24F55B1EDD5DD500D0CC7D /* ChatViewController.swift */; };
 		DE24F55E1EDD621400D0CC7D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24F55D1EDD621300D0CC7D /* Message.swift */; };
 		DE3E6EA21EDA7EC500C10B3E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F4EE11ED8023F00313477 /* Profile.storyboard */; };
@@ -79,6 +80,7 @@
 		AC58A2858F0C255140D1BE70 /* Pods-InkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InkChat/Pods-InkChat.debug.xcconfig"; sourceTree = "<group>"; };
 		DB9CCE2F8417C33343C911AD /* Pods-InkChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InkChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InkChatTests/Pods-InkChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE21F45E1EDD8A9E00D2A8EF /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		DE21F4601EDDA5BE00D2A8EF /* Double+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		DE24F55B1EDD5DD500D0CC7D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		DE24F55D1EDD621300D0CC7D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DE3E6EA31EDA7F3D00C10B3E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				DE5867511ED7E1A700FD57C1 /* UITableView+Ext.swift */,
 				DE58674F1ED7E17500FD57C1 /* UICollectionView+Ext.swift */,
+				DE21F4601EDDA5BE00D2A8EF /* Double+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				DE3E6EAC1EDAC1C500C10B3E /* SettingsTableViewController.swift in Sources */,
 				DE58674C1ED7E14F00FD57C1 /* ReusableView.swift in Sources */,
 				DE24F55E1EDD621400D0CC7D /* Message.swift in Sources */,
+				DE21F4611EDDA5BE00D2A8EF /* Double+Ext.swift in Sources */,
 				DE21F45F1EDD8A9E00D2A8EF /* UserInfoViewController.swift in Sources */,
 				DE5867521ED7E1A700FD57C1 /* UITableView+Ext.swift in Sources */,
 				DE5867501ED7E17500FD57C1 /* UICollectionView+Ext.swift in Sources */,

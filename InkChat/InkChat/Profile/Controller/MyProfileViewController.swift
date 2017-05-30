@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import PKHUD
+import Firebase
 
 class MyProfileViewController: UIViewController {
     
@@ -27,7 +28,13 @@ class MyProfileViewController: UIViewController {
         self.updateStackView.isHidden = true
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        
+        Product.download(oneId: (Auth.auth().currentUser?.uid)!) { [weak weakSelf = self] (product: Product) in
+            weakSelf?.products.insert(product, at: 0)
+            
+            DispatchQueue.main.async {
+                weakSelf?.collectionView.reloadData()
+            }
+        }
         self.collectionView!.register(TattooCollectionViewCell.self)
     }
     
@@ -55,6 +62,8 @@ class MyProfileViewController: UIViewController {
     }
     
     @IBAction func pictureSeleccted(_ sender: UIButton) {
+        self.updateStackView.isHidden = true
+        
         let imagePickerController = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             imagePickerController.sourceType = .savedPhotosAlbum
@@ -134,9 +143,11 @@ extension MyProfileViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             selectedImage = image
-            Product.updateProduct(image: image) { (product) in
-                self.products.append(product)
-                self.collectionView.reloadData()
+            Product.updateProduct(image: image) { [weak weakSelf = self] (product) in
+                weakSelf?.products.insert(product, at: 0)
+                DispatchQueue.main.async {
+                    weakSelf?.collectionView.reloadData()
+                }
             }
         } else {
             print("JESS: A valid image wasn't selected")

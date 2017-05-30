@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController {
 
@@ -27,6 +28,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.avatarImageView.sd_setImage(with: URL(string: (user?.profileImageUrl)!), placeholderImage: #imageLiteral(resourceName: "head"))
         self.productButtonSelected(self.productButton)
     }
 
@@ -52,9 +54,7 @@ class ProfileViewController: UIViewController {
         self.infoButton.setImage(#imageLiteral(resourceName: "info_selected"), for: .normal)
         
         let newController = self.storyboard?.instantiateViewController(withIdentifier: "UserInfoViewController") as? UserInfoViewController
-        newController?.nameLabel.text = self.user?.name
-        newController?.emailLabel.text = self.user?.email
-        newController?.cityLabel.text = self.user?.city
+        newController?.user = self.user
         
         self.changeViewController(newController: newController!)
     }

@@ -18,7 +18,8 @@ class PriceViewController: UIViewController {
     }
 
     @IBAction func choosePrice(_ sender: UISlider) {
-        self.priceLabel.text = "\(sender.value)RMB"
+        let price = Double(sender.value).format(f: ".-2f")
+        self.priceLabel.text = "\(price)RMB"
     }
 
 }

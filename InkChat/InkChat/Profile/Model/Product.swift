@@ -76,16 +76,15 @@ class Product {
         })
     }
     
-    class func download(exceptID: String, completion: @escaping (Product) -> Swift.Void) {
-        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+    class func download(oneId: String, completion: @escaping (Product) -> Swift.Void) {
+        Database.database().reference().child("products").observe(.childAdded, with: { (snapshot) in
             let id = snapshot.key
-            let data = snapshot.value as! [String: Any]
-            let credentials = data["credentials"] as! [String: String]
-            if id != exceptID {
-                let name = credentials["name"]!
-                let userId = credentials["userId"]!
-                let city = credentials["city"]!
-                let productImageUrl = credentials["productImageUrl"]!
+            let data = snapshot.value as! [String: String]
+            let userId = data["userId"]!
+            if userId == oneId {
+                let name = data["name"]!
+                let city = data["city"]!
+                let productImageUrl = data["productImageUrl"]!
                 let link = URL.init(string: productImageUrl)
                 URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
                     if error == nil {

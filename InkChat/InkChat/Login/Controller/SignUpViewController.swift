@@ -32,6 +32,12 @@ class SignUpViewController: UIViewController {
         chooseAvatarImageView.isUserInteractionEnabled = true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.view.endEditing(true)
+    }
+    
     func chooseAvatar() {
         let picker = UIImagePickerController()
         
@@ -46,6 +52,26 @@ class SignUpViewController: UIViewController {
         guard let email = emailTextField.text, let password = passwordTextField.text, let username = usernameTextField.text, let city = cityTextField.text else {
             print("Form is not valid")
             HUD.flash(.labeledProgress(title: "Error", subtitle: "Form is not valid"), delay: 2.0)
+            return
+        }
+        
+        guard !username.isEmpty else {
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "username is not valid"), delay: 2.0)
+            return
+        }
+        
+        guard !password.isEmpty else {
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "password is not valid"), delay: 2.0)
+            return
+        }
+        
+        guard !email.isEmpty else {
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "email is not valid"), delay: 2.0)
+            return
+        }
+        
+        guard !city.isEmpty else {
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "city is not valid"), delay: 2.0)
             return
         }
         

@@ -14,4 +14,14 @@ class UserInfoViewController: UITableViewController {
     @IBOutlet weak var cityLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
+    
+    var user: User?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        nameLabel.text = self.user?.name
+        emailLabel.text = self.user?.email
+        cityLabel.text = self.user?.city
+    }
 }

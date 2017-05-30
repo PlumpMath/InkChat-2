@@ -18,7 +18,6 @@ import SDWebImage
 class ChatViewController: JSQMessagesViewController {
     
     var messages = [JSQMessage]()
-    var avatarDict = [String: JSQMessagesAvatarImage]()
     
     var user: User? {
         didSet {
@@ -30,6 +29,7 @@ class ChatViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.senderDisplayName = ""
         if let currentUser = Auth.auth().currentUser {
             self.senderId = currentUser.uid
             self.senderDisplayName = ad.user?.name
@@ -58,7 +58,6 @@ class ChatViewController: JSQMessagesViewController {
                 message?.from(dictionary: dictionary)
                 
                 self.messages.append(message!)
-                self.observeUsers((message?.chatPartnerId())!)
                 DispatchQueue.main.async(execute: {
                     self.collectionView?.reloadData()
                     //scroll to the last index
@@ -69,36 +68,6 @@ class ChatViewController: JSQMessagesViewController {
             }, withCancel: nil)
             
         }, withCancel: nil)
-    }
-    
-    func observeUsers(_ id: String) {
-        Database.database().reference().child("users").child(id).child("credentials").observe(.value, with: {
-            snapshot in
-            if let dict = snapshot.value as? [String: AnyObject] {
-                let avatarUrl = dict["profileImageUrl"] as! String
-                
-                self.setupAvatar(avatarUrl, messageId: id)
-            }
-        })
-    }
-    
-    func setupAvatar(_ url: String, messageId: String) {
-        if url != "" {
-            let fileUrl = URL(string: url)
-            let data = try? Data(contentsOf: fileUrl!)
-            let image = UIImage(data: data!)
-            let userImg = JSQMessagesAvatarImageFactory.avatarImage(with: image, diameter: 30)
-            self.avatarDict[messageId] = userImg
-            DispatchQueue.main.async{
-                self.collectionView.reloadData()
-            }
-        } else {
-            avatarDict[messageId] = JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: "profileImage"), diameter: 30)
-            
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
@@ -116,9 +85,7 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-        let message = messages[indexPath.item]
-        
-        return avatarDict[message.senderId]
+        return JSQMessagesAvatarImage(placeholder: #imageLiteral(resourceName: "head"))
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -152,6 +152,14 @@ class User: NSObject {
     }
     
     class func info(forUserID: String, completion: @escaping (User) -> Swift.Void) {
+        if let partainerUser = ad.users.first(where: { (user) -> Bool in
+            user.id == forUserID
+        }) {
+            completion(partainerUser)
+            return
+        }
+        
+    
         Database.database().reference().child("users").child(forUserID).child("credentials").observeSingleEvent(of: .value, with: { (snapshot) in
             if let data = snapshot.value as? [String: String] {
                 let name = data["name"]!

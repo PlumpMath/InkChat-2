@@ -23,6 +23,12 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.view.endEditing(true)
+    }
+    
     @IBAction func login(_ sender: UIButton) {
         HUD.show(.progress)
         guard let username = usernameTextField.text, let password = passwordTextField.text else {

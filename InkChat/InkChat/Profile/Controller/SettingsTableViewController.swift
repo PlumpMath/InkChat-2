@@ -37,8 +37,12 @@ class SettingsTableViewController: UITableViewController {
             
             if indexPath.row == 0 {
                 cell.textLabel?.text = "About"
-            } else if let type = ad.user?.type {
-                cell.textLabel?.text = "Your're \(String(describing: type))"
+            } else {
+                var userType = "unknow"
+                if let type = ad.user?.type {
+                    userType = type
+                    cell.textLabel?.text = "Your're \(String(describing: userType))"
+                }
             }
             return cell
         }

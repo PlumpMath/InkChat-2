@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         DispatchQueue.global().async {
             User.downloadAllUsers { [weak weakSelf = self] (user) in
-                weakSelf?.users.append(user)
+                weakSelf?.users.insert(user, at: 0)
                 let currentUser = Auth.auth().currentUser
                 if currentUser?.uid != nil {
                     ad.user = ad.users.first(where: { (user) -> Bool in

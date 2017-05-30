@@ -26,10 +26,13 @@ class MainViewController: SearchControllerBaseViewController {
             ad.user = ad.users.first(where: { (user) -> Bool in
                 user.email == currentUser?.email
             })
-            Product.downloadAllProduct(completion: { (product) in
-                self.allResults.append(product)
-                self.visibleResults = self.allResults
-                self.tableView.reloadData()
+            Product.downloadAllProduct(completion: { [weak weakSelf = self] (product) in
+                weakSelf?.allResults.insert(product, at: 0)
+                weakSelf?.visibleResults = self.allResults
+                
+                DispatchQueue.main.async {
+                    weakSelf?.tableView.reloadData()
+                }
             })
         }
     }
