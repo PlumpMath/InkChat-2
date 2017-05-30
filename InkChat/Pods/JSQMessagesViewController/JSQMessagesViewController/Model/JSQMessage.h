@@ -32,7 +32,7 @@
 /**
  *  Returns the string identifier that uniquely identifies the user who sent the message. 
  */
-@property (copy, nonatomic, readonly) NSString *senderId;
+@property (copy, nonatomic) NSString *senderId;
 
 /**
  *  Returns the display name for the user who sent the message. This value does not have to be unique.
@@ -55,7 +55,7 @@
  *  Returns the body text of the message, or `nil` if the message is a media message.
  *  That is, if `isMediaMessage` is equal to `YES` then this value will be `nil`.
  */
-@property (copy, nonatomic, readonly) NSString *text;
+@property (copy, nonatomic) NSString *text;
 
 /**
  *  Returns the media item attachment of the message, or `nil` if the message is not a media message.

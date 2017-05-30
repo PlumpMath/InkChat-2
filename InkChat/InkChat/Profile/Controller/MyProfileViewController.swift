@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import PKHUD
 
 class MyProfileViewController: UIViewController {
     
@@ -16,17 +17,12 @@ class MyProfileViewController: UIViewController {
     
     var screenWidth: CGFloat = 320.0
     var products = [Product]()
-    var imagePicker: UIImagePickerController!
     var selectedImage: UIImage!
     
     var isMyProfile: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.imagePicker = UIImagePickerController()
-        self.imagePicker.allowsEditing = true
-        self.imagePicker.delegate = self
         
         self.updateStackView.isHidden = true
         self.collectionView.dataSource = self
@@ -44,10 +40,28 @@ class MyProfileViewController: UIViewController {
     
     @IBAction func cameraSelected(_ sender: UIButton) {
         self.updateStackView.isHidden = true
-        present(imagePicker, animated: true, completion: nil)
+        
+        let imagePickerController = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePickerController.sourceType = .camera
+        } else {
+            HUD.flash(.labeledProgress(title: "Error", subtitle: "This Device is not support Camera"), delay: 2.0)
+            return
+        }
+        imagePickerController.allowsEditing = true
+        imagePickerController.delegate = self
+        
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     @IBAction func pictureSeleccted(_ sender: UIButton) {
+        let imagePickerController = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            imagePickerController.sourceType = .savedPhotosAlbum
+        }
+        imagePickerController.allowsEditing = true
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     @IBAction func videoSelected(_ sender: UIButton) {
@@ -114,7 +128,7 @@ extension MyProfileViewController: UICollectionViewDelegateFlowLayout {
 
 extension MyProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        imagePicker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -127,6 +141,6 @@ extension MyProfileViewController: UIImagePickerControllerDelegate, UINavigation
         } else {
             print("JESS: A valid image wasn't selected")
         }
-        imagePicker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 }

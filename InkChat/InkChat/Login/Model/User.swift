@@ -159,7 +159,7 @@ class User: NSObject {
                 let type = data["type"]!
                 let city = data["city"]!
                 let profileImageUrl = data["profileImageUrl"]!
-                let link = URL.init(string: data["profileImageUrl"]!)
+                let link = URL.init(string: profileImageUrl)
                 URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
                     if error == nil {
                         let profileImage = UIImage(data: data!)

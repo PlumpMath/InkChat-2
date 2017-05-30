@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5bj-Mf-DZb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5bj-Mf-DZb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -211,11 +211,13 @@ to full type of grid. Black lines never out of date.</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="avatarImageView" destination="zb9-na-Pb0" id="Ze6-yG-t6k"/>
                         <outlet property="chatButton" destination="WLV-e3-f7L" id="qxd-bg-hng"/>
                         <outlet property="containerView" destination="Rou-UJ-A1f" id="whV-Dq-cxw"/>
                         <outlet property="favariteButton" destination="TxL-Ki-SwD" id="s3c-AY-HXT"/>
                         <outlet property="infoButton" destination="xI8-UY-gEO" id="fxn-57-Jjw"/>
                         <outlet property="productButton" destination="3Q2-aA-0K3" id="YMK-vn-2Y6"/>
+                        <segue destination="jSY-O8-aSM" kind="show" identifier="ChatViewControllerSegue" id="RQO-4p-zwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktb-dq-L8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,7 +239,7 @@ to full type of grid. Black lines never out of date.</string>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="section0" textLabel="AmP-Ha-zgD" style="IBUITableViewCellStyleDefault" id="GHV-xa-wIe">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHV-xa-wIe" id="T5r-I2-n2h">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -255,10 +257,10 @@ to full type of grid. Black lines never out of date.</string>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="section1" id="jJo-a5-x0C">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="center" tableViewCell="jJo-a5-x0C" id="FQS-DN-piz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bf-Pw-9ci">
@@ -410,10 +412,10 @@ to full type of grid. Black lines never out of date.</string>
             </objects>
             <point key="canvasLocation" x="1687" y="-1961"/>
         </scene>
-        <!--Table View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="ARE-op-urp">
             <objects>
-                <tableViewController storyboardIdentifier="InfoViewController" id="s0s-yD-9fN" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserInfoViewController" id="s0s-yD-9fN" customClass="UserInfoViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rbQ-h2-nGT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,8 +430,8 @@ to full type of grid. Black lines never out of date.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ku-wP-p1c">
-                                                    <rect key="frame" x="15" y="12" width="60.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ku-wP-p1c">
+                                                    <rect key="frame" x="15" y="12" width="28" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -597,6 +599,11 @@ to full type of grid. Black lines never out of date.</string>
                             <outlet property="delegate" destination="s0s-yD-9fN" id="sHp-yD-gMr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="cityLabel" destination="RS9-Ba-Lab" id="Hcb-e6-ZEx"/>
+                        <outlet property="emailLabel" destination="mmT-Mo-oAz" id="hSE-y0-n8R"/>
+                        <outlet property="nameLabel" destination="Sd9-5m-JDD" id="QRg-68-Ugl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud6-fA-Dld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,7 +622,7 @@ to full type of grid. Black lines never out of date.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r21-W4-fGi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4as-RB-a2z">
                                 <rect key="frame" x="139.5" y="285.5" width="97" height="97"/>
@@ -663,7 +670,7 @@ to full type of grid. Black lines never out of date.</string>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GoY-Ga-ErZ">
-                                <rect key="frame" x="0.0" y="96" width="375" height="527"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -671,7 +678,7 @@ to full type of grid. Black lines never out of date.</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKX-kT-rKv" id="ff1-Gh-9LN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0N-De-DEA">
@@ -737,6 +744,24 @@ to full type of grid. Black lines never out of date.</string>
             </objects>
             <point key="canvasLocation" x="889" y="-1182"/>
         </scene>
+        <!--ChatViewController-->
+        <scene sceneID="L7k-ss-v7y">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" title="ChatViewController" id="jSY-O8-aSM" customClass="ChatViewController" customModule="InkChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P7b-mt-aue"/>
+                        <viewControllerLayoutGuide type="bottom" id="tLY-Dn-1VD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="quc-L1-bll">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tcx-JN-yOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="291"/>
+        </scene>
         <!--Storyboard Reference-->
         <scene sceneID="WXH-od-kT8">
             <objects>
@@ -749,7 +774,7 @@ to full type of grid. Black lines never out of date.</string>
         <scene sceneID="xyO-dk-Wdh">
             <objects>
                 <navigationController id="5bj-Mf-DZb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvH-7T-bp9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uvH-7T-bp9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -887,7 +912,7 @@ to full type of grid. Black lines never out of date.</string>
             <objects>
                 <navigationController storyboardIdentifier="MyProfileNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="9Bx-nj-oVm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Te-kA-Qji">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Te-kA-Qji">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -920,6 +945,6 @@ to full type of grid. Black lines never out of date.</string>
         <image name="video" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5X6-P9-fhM"/>
+        <segue reference="ae1-5h-UMI"/>
     </inferredMetricsTieBreakers>
 </document>

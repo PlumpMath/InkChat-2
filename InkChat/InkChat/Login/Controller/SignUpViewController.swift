@@ -55,7 +55,7 @@ class SignUpViewController: UIViewController {
                 if status {
                     self.performSegue(withIdentifier: "StyleViewControllerSegue", sender: nil)
                 } else {
-                    HUD.flash(.error, delay: 1.0)
+//                    HUD.flash(.error, delay: 1.0)
                 }
             }
         }

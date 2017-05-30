@@ -61,9 +61,13 @@ class SearchControllerBaseViewController: UITableViewController {
     // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        let product = visibleResults[indexPath.row]
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateInitialViewController()
-        self.present(vc!, animated: true, completion: nil)
+        let nvc = storyboard.instantiateInitialViewController() as! UINavigationController
+        let profileViewController = nvc.topViewController as! ProfileViewController
+        User.info(forUserID: product.userId!) { (user) in
+            profileViewController.user = user
+            self.present(nvc, animated: true, completion: nil)
+        }
     }
 }

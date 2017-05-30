@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             if status {
                 self.dismiss(animated: true, completion: nil)
             } else {
-                HUD.flash(.error, delay: 1.0)
+                print("Log in error")
             }
         }
     }

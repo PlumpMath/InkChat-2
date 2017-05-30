@@ -17,6 +17,13 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var avatarImageView: UIImageView!
+    var user: User? {
+        didSet {
+            self.title = user?.name
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +51,10 @@ class ProfileViewController: UIViewController {
         
         self.infoButton.setImage(#imageLiteral(resourceName: "info_selected"), for: .normal)
         
-        let newController = self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController")
+        let newController = self.storyboard?.instantiateViewController(withIdentifier: "UserInfoViewController") as? UserInfoViewController
+        newController?.nameLabel.text = self.user?.name
+        newController?.emailLabel.text = self.user?.email
+        newController?.cityLabel.text = self.user?.city
         
         self.changeViewController(newController: newController!)
     }
@@ -66,6 +76,8 @@ class ProfileViewController: UIViewController {
         self.resetDefaultImage()
         
         self.chatButton.setImage(#imageLiteral(resourceName: "chat_selected"), for: .normal)
+        
+        self.performSegue(withIdentifier: "ChatViewControllerSegue", sender: self.user)
     }
     
     func resetDefaultImage() {
@@ -91,5 +103,10 @@ class ProfileViewController: UIViewController {
         })
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChatViewControllerSegue" {
+            let ChatViewController = segue.destination as? ChatViewController
+            ChatViewController?.user = self.user
+        }
+    }
 }

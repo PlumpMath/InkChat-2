@@ -19,7 +19,6 @@ class Product {
     var city: String?
     var id: String?
     
-    
     init(dictionary: [String: AnyObject]) {
         self.userId = dictionary["userId"] as? String
         self.productImageUrl = dictionary["productImageUrl"] as? String
@@ -70,7 +69,8 @@ class Product {
             let productImageUrl = data["productImageUrl"]!
             let name = data["name"]!
             let city = data["city"]!
-            let values = ["id": id, "name": name, "city": city, "productImageUrl": productImageUrl]
+            let userId = data["userId"]!
+            let values = ["id": id, "name": name, "city": city, "productImageUrl": productImageUrl, "userId": userId]
             let product = Product(dictionary: values as [String : AnyObject])
             completion(product)
         })
